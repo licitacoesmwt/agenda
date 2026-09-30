@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agenda de Licitações — MWT Uniformes</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  /* Layout: faixa azul-marinho de cabeçalho com faixa refletiva, barra-resumo, e agenda agrupada por semana em listas de linhas (sem cartões). */
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+
+  /* Cabeçalho */
+  .top { background: var(--navy); color: var(--on-navy); }
+  .top .wrap {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 16px 32px; flex-wrap: wrap; padding-block: 26px 22px;
+  }
+  .brand { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 0 0 4px; }
+  .top h1 { font-family: var(--font-display); font-weight: 700; font-size: 42px; line-height: 1; letter-spacing: .01em; margin: 0; text-wrap: balance; }
+  .today { text-align: right; }
+  .today-date { font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: .02em; }
+  .today-date::first-letter { text-transform: uppercase; }
+  .today-upd { font-size: 12.5px; color: var(--on-navy-muted); }
+  .reflect {
+    height: 10px;
+    background: linear-gradient(to bottom, var(--hivis) 0 2px, var(--silver) 2px 8px, var(--hivis) 8px 10px);
+  }
+
+  /* Resumo */
+  .summary { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .summary .wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding-inline: 24px; }
+  .sum {
+    display: block; text-decoration: none; color: inherit;
+    padding: 16px 18px 14px; border-left: 1px solid var(--line);
+  }
+  .sum:first-child { border-left: 0; padding-left: 0; }
+  .sum:hover .sum-label { color: var(--ink); }
+  .sum-num { display: block; font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+  .sum-label { display: block; margin-top: 4px; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+  .sum.is-crit .sum-num { color: var(--crit); }
+
+  main.wrap { padding-block: 22px 40px; display: grid; gap: 26px; }
+
+  .alert {
+    display: flex; gap: 10px 14px; flex-wrap: wrap; align-items: baseline;
+    background: var(--crit-soft); color: var(--crit);
+    border: 1px solid color-mix(in srgb, var(--crit) 35%, transparent);
+    padding: 11px 16px; font-weight: 500;
+  }
+  .alert strong { font-family: var(--font-display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; }
+
+  /* Grupos */
+  .group-head { display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px; }
+  .group-head h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+  .group-head .n { font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .group-head .range { font-size: 13px; color: var(--muted); margin-left: auto; }
+  .rows { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1.05fr) minmax(0, 1.6fr) 176px 112px;
+    gap: 6px 20px; align-items: start;
+    padding: 14px 18px; border-top: 1px solid var(--line);
+  }
+  .rows > .row:first-child { border-top: 0; }
+  .row.is-critical { background: var(--crit-soft); }
+  .cell { min-width: 0; }
+
+  .d-day { font-family: var(--font-display); font-weight: 700; font-size: 32px; line-height: .95; font-variant-numeric: tabular-nums; }
+  .d-meta { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+  .d-time { font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .d-none { font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .row.is-critical .d-day { color: var(--crit); }
+
+  .org-name { display: block; font-weight: 600; font-size: 16px; line-height: 1.25; }
+  .org-sub { display: block; font-size: 13.5px; color: var(--muted); }
+  .proc-code { display: block; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .tag { font-family: var(--font-display); font-weight: 700; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; padding: 1px 6px; background: var(--tag-bg); color: var(--ink); border-radius: 2px; }
+  .tag-critical { background: var(--crit); color: var(--surface); }
+  .tag-source { display: none; }
+
+  .cell-object { font-size: 14.5px; }
+  .row-note { display: block; margin-top: 5px; font-size: 13px; color: var(--muted); }
+  .cell-portal { font-size: 13.5px; color: var(--muted); overflow-wrap: anywhere; }
+  .cell-portal a { color: var(--link); font-weight: 500; text-decoration: none; }
+  .cell-portal a:hover { text-decoration: underline; }
+  .cell-status { text-align: right; }
+  .pill { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .row[data-status="today"] .pill { color: var(--crit); }
+  .row[data-status="tomorrow"] .pill { color: var(--warn); }
+  .row[data-status="week"] .pill { color: var(--ink); }
+  .row[data-status="watch"] .pill { color: var(--link); }
+  .row.is-critical .pill { color: var(--crit); }
+
+  /* Anotações */
+  .notes h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; }
+  .notes ul { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; }
+  .notes li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 10px 18px; border-top: 1px solid var(--line); font-size: 14.5px; }
+  .notes li:first-child { border-top: 0; }
+  .note-date { font-family: var(--font-display); font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+  .foot { border-top: 1px solid var(--line); }
+  .foot .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 24px; }
+
+
+  .row-note { display: none; }
+  [hidden] { display: none !important; }
+
+  /* Registro */
+  .today-links { margin-top: 6px; font-size: 13px; display: flex; gap: 14px; justify-content: flex-end; flex-wrap: wrap; }
+  .today-links a { color: var(--on-navy); text-underline-offset: 3px; }
+  .today-links .ask-count { color: var(--hivis); font-weight: 600; }
+  .reg-link { display: inline-block; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+  .reg-link b { font-weight: 600; color: var(--ink); }
+
+  .ask { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--hivis); border-radius: 3px; }
+  .ask-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 12px 18px 0; }
+  .ask-head h2 { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--muted); }
+  .ask-head .ask-pos { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ask-body { padding: 8px 18px 16px; display: grid; gap: 12px; }
+  .ask-q { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.15; margin: 0; text-wrap: balance; }
+  .ask-ctx { font-size: 13.5px; color: var(--muted); margin: -6px 0 0; }
+  .ask-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .opt {
+    font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 2px; padding: 8px 12px; cursor: pointer;
+  }
+  .opt:hover { border-color: var(--navy-2); }
+  .opt[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: var(--on-navy); }
+  .opt:focus-visible, .btn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  .ask-field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); max-width: 640px; }
+  .ask-field input, .ask-field textarea {
+    font: inherit; font-size: 14.5px; color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 2px; padding: 7px 9px; width: 100%;
+  }
+  .ask-field textarea { min-height: 64px; resize: vertical; }
+  .ask-field input[type="date"] { width: auto; }
+  .ask-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn { font: inherit; font-size: 14px; font-weight: 600; border-radius: 2px; padding: 8px 16px; cursor: pointer; border: 1px solid var(--navy); background: var(--navy); color: var(--on-navy); }
+  .btn[disabled] { opacity: .45; cursor: default; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); font-weight: 500; }
+  .ask-msg { font-size: 13px; color: var(--muted); }
+
+  .registro h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+  .reg-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin: 0 0 10px; }
+  .reg-head p { margin: 0; font-size: 13px; color: var(--muted); }
+  .reg-stats { display: flex; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; margin-bottom: 8px; }
+  .reg-stat { padding: 10px 16px; border-left: 1px solid var(--line); min-width: 0; }
+  .reg-stat:first-child { border-left: 0; }
+  .reg-stat b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 1; font-variant-numeric: tabular-nums; }
+  .reg-stat span { font-size: 12px; color: var(--muted); }
+  .reg-stat.win b { color: var(--ok); }
+  .reg-stat.pend b { color: var(--warn); }
+  .reg-why { font-size: 13px; color: var(--muted); margin: 0 0 10px; display: grid; gap: 2px; }
+  .reg-why b { color: var(--ink); font-weight: 600; }
+  .reg-tools { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 10px; }
+  .reg-tools label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+  .reg-tools select, .reg-tools input { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 2px; padding: 5px 8px; min-width: 0; }
+  .reg-tools input { width: 220px; max-width: 100%; }
+  select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--link); outline-offset: 1px; }
+  .reg-list { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; }
+  .rec { display: grid; grid-template-columns: 96px minmax(0, 1.1fr) 190px minmax(0, 1.6fr) 96px; gap: 6px 16px; align-items: start; padding: 12px 18px; border-top: 1px solid var(--line); }
+  .rec:first-child { border-top: 0; }
+  .rec-date { font-family: var(--font-display); font-weight: 700; font-size: 17px; font-variant-numeric: tabular-nums; }
+  .rec-date small { display: block; font-family: var(--font-body); font-weight: 400; font-size: 11.5px; color: var(--muted); }
+  .rec-org b { display: block; font-weight: 600; }
+  .rec-org span { display: block; font-size: 12.5px; color: var(--muted); }
+  .rec-sit { font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+  .rec-sit small { display: block; font-family: var(--font-body); font-weight: 500; font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--warn); }
+  .rec[data-sit="ganhamos"] .rec-sit { color: var(--ok); }
+  .rec[data-sit="perdemos"] .rec-sit, .rec[data-sit="inab_amostra"] .rec-sit, .rec[data-sit="inab_hab"] .rec-sit { color: var(--crit); }
+  .rec[data-sit="desistimos"] .rec-sit, .rec[data-sit="fracassada"] .rec-sit { color: var(--muted); }
+  .rec-last { font-size: 14px; }
+  .rec-last details { margin-top: 4px; font-size: 13px; color: var(--muted); }
+  .rec-last summary { cursor: pointer; color: var(--link); }
+  .rec-last ol { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; border-left: 2px solid var(--line); padding-left: 10px; }
+  .rec-last li time { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; margin-right: 6px; }
+  .rec-act { text-align: right; }
+  .rec-act .btn { font-size: 13px; padding: 5px 10px; }
+  .reg-empty { padding: 16px 18px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 860px) {
+    .rec { grid-template-columns: 74px minmax(0, 1fr) auto; }
+    .rec > .rec-sit, .rec > .rec-last { grid-column: 2 / 4; }
+    .rec > .rec-act { grid-column: 3; grid-row: 1; }
+    .ask-q { font-size: 21px; }
+  }
+  @media (max-width: 520px) {
+    .rec { padding: 11px 14px; grid-template-columns: 58px minmax(0, 1fr) auto; gap: 6px 10px; }
+    .reg-stat { flex: 1 1 33%; border-top: 1px solid var(--line); }
+    .ask-head, .ask-body { padding-inline: 14px; }
+    .today-links { justify-content: flex-start; }
+  }
+
+
+  /* Indicadores */
+  .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 16px 18px 18px; margin-bottom: 18px; display: grid; gap: 18px; }
+  .kpi-top { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; }
+  .kpi-top h3 { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--muted); }
+  .kpi-top label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+  .kpi-top select { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 2px; padding: 4px 8px; }
+  .kpi-lead { margin: 0; font-size: 16px; line-height: 1.55; max-width: 78ch; }
+  .kpi-lead b { font-weight: 600; }
+  .kpi-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px 32px; }
+  .kpi-block h4 { font-family: var(--font-display); font-weight: 700; font-size: 13.5px; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 8px; }
+  .funnel { display: grid; gap: 6px; }
+  .f-row { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; align-items: center; }
+  .f-label { font-size: 13.5px; color: var(--muted); }
+  .f-track { position: relative; height: 30px; }
+  .f-bar { height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; min-width: 2px; }
+  .f-val { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--on-bar); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .f-val.out { color: var(--ink); }
+  .f-conv { font-size: 12px; color: var(--muted); padding-left: 120px; }
+  .rates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .rate { padding: 12px 14px 0 0; }
+  .rate + .rate { padding-left: 14px; border-left: 1px solid var(--line); }
+  .rate b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+  .rate span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .rate small { display: block; font-size: 12px; color: var(--muted); }
+  .hbars { display: grid; gap: 7px; }
+  .hb { display: grid; grid-template-columns: minmax(0, 1fr) 36px; gap: 3px 10px; align-items: center; font-size: 13.5px; }
+  .hb-name { grid-column: 1 / 3; }
+  .hb-track { height: 10px; background: var(--bar-soft); border-radius: 0 4px 4px 0; }
+  .hb-fill { height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; min-width: 2px; }
+  .hb-n { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; font-size: 13px; }
+  .kpi-empty { font-size: 13.5px; color: var(--muted); margin: 0; }
+  .ptable-wrap { overflow-x: auto; }
+  .ptable { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  .ptable th { text-align: left; font-weight: 600; color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line); }
+  .ptable td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); }
+  .ptable td.n, .ptable th.n { text-align: right; }
+
+  .rates { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .trend { display: grid; gap: 8px; }
+  .trend-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--muted); }
+  .trend-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+  .trend-plot { display: flex; gap: 18px; align-items: flex-end; overflow-x: auto; padding-top: 20px; padding-bottom: 2px; border-bottom: 1px solid var(--line); min-height: 150px; }
+  .t-month { display: grid; gap: 4px; justify-items: center; flex: 0 0 auto; }
+  .t-bars { display: flex; gap: 2px; align-items: flex-end; height: 120px; }
+  .t-bar { width: 22px; border-radius: 4px 4px 0 0; position: relative; min-height: 2px; }
+  .t-bar span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); font-size: 11.5px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; padding-bottom: 2px; }
+  .t-lab { font-size: 12px; color: var(--muted); text-transform: capitalize; }
+  .s1 { background: var(--st-1); } .s2 { background: var(--st-2); } .s3 { background: var(--st-3); }
+  .dim-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .dim-head h4 { margin: 0; }
+  .dim-head select { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 2px; padding: 4px 8px; }
+  .dim-head label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+  .winbar { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .winbar .hb-track { width: 70px; height: 8px; }
+  .insights { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .insights li { font-size: 14px; padding-left: 14px; position: relative; max-width: 90ch; }
+  .insights li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; background: var(--hivis); border-radius: 1px; }
+  .rec-tags { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .rec-class { margin-top: 6px; font-size: 12.5px; }
+  .rec-class summary { cursor: pointer; color: var(--link); }
+  .rec-class .cls { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 10px; margin-top: 6px; }
+  .rec-class label { display: grid; gap: 2px; color: var(--muted); }
+  .rec-class select { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 2px; padding: 3px 6px; }
+  @media (max-width: 860px) { .rates { grid-template-columns: repeat(2, minmax(0, 1fr)); } .rate:nth-child(3) { border-left: 0; padding-left: 0; } }
+
+  @media (max-width: 860px) { .kpi-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 520px) {
+    .kpi { padding: 14px; }
+    .rates { grid-template-columns: minmax(0, 1fr); }
+    .rate + .rate { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); padding-bottom: 10px; }
+    .f-row { grid-template-columns: 88px minmax(0, 1fr); }
+    .f-conv { padding-left: 98px; }
+  }
+
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 78px minmax(0, 1fr); }
+    .row > .cell-object, .row > .cell-portal, .row > .cell-status { grid-column: 2; }
+    .cell-status { text-align: left; }
+    .summary .wrap { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .sum:nth-child(4) { border-left: 0; padding-left: 0; }
+    .sum { border-top: 1px solid var(--line); }
+    .sum:nth-child(-n+3) { border-top: 0; }
+  }
+  @media (max-width: 520px) {
+    .wrap, .summary .wrap { padding-inline: 16px; }
+    .top h1 { font-size: 34px; }
+    .today { text-align: left; }
+    .summary .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sum, .sum:nth-child(4) { border-left: 1px solid var(--line); padding-left: 14px; border-top: 1px solid var(--line); }
+    .sum:nth-child(odd) { border-left: 0; padding-left: 0; }
+    .sum:nth-child(-n+2) { border-top: 0; }
+    .sum:nth-child(3) { border-top: 1px solid var(--line); }
+    .group-head .range { display: none; }
+    .row { padding: 12px 14px; gap: 6px 14px; grid-template-columns: 64px minmax(0, 1fr); }
+    .d-day { font-size: 28px; }
+    .notes li { grid-template-columns: 52px minmax(0, 1fr); padding: 10px 14px; }
+  }
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <div>
+      <p class="brand">MWT Uniformes</p>
+      <h1>Agenda de Licitações</h1>
+    </div>
+    <div class="today">
+      <div class="today-date" id="clockDate">quarta-feira, 30 de setembro de 2026</div>
+      <div class="today-upd">Atualizado em <span id="updatedAt">30/09/2026 às 08:01</span></div>
+    </div>
+  </div>
+  <div class="reflect" aria-hidden="true"></div>
+</header>
+
+<nav class="summary" aria-label="Resumo da agenda">
+  <div class="wrap">
+    <a class="sum" href="#esta-semana"><span class="sum-num" id="sumWeek">3</span><span class="sum-label">esta semana</span></a>
+    <a class="sum" href="#proxima-semana"><span class="sum-num" id="sumNext">7</span><span class="sum-label">próxima semana</span></a>
+    <a class="sum" href="#mais-adiante"><span class="sum-num" id="sumLater">1</span><span class="sum-label">mais adiante</span></a>
+    <a class="sum" href="#acompanhamento"><span class="sum-num" id="sumWatch">7</span><span class="sum-label">em acompanhamento</span></a>
+    <a class="sum is-crit" href="#esta-semana" id="sumSamplesLink"><span class="sum-num" id="sumSamples">1</span><span class="sum-label">entregas de amostras</span></a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="alert" id="criticalBanner" hidden><strong>Amostras</strong><span id="criticalBannerText"></span></div>
+
+  <section class="group" id="esta-semana"><div class="group-head"><h2>Esta semana</h2><span class="n"></span><span class="range"></span></div><div class="rows"></div></section>
+  <section class="group" id="proxima-semana"><div class="group-head"><h2>Próxima semana</h2><span class="n"></span><span class="range"></span></div><div class="rows"></div></section>
+  <section class="group" id="mais-adiante"><div class="group-head"><h2>Mais adiante</h2><span class="n"></span><span class="range"></span></div><div class="rows"></div></section>
+  <section class="group" id="acompanhamento"><div class="group-head"><h2>Em acompanhamento</h2><span class="n"></span><span class="range">sem data definida</span></div><div class="rows"></div></section>
+
+  <div class="rows" id="board" aria-label="Processos">
+<!-- LINHAS-INICIO -->
+      <article class="row" role="row" data-id="2026-08-27-aracoiaba-da-serra" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Araçoiaba da Serra</span>
+          <span class="org-sub">acompanhar pregão</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Amostras já entregues. Acompanhar o andamento do pregão até sair o resultado.
+          <span class="row-note">Provavelmente o Pregão 014/2026 (GCM e Vigias) — confirme se é o mesmo processo.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bbmnet.com.br/" target="_blank" rel="noopener">BBMNET (novobbmnet.com.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-braganca-paulista-dispensa" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Bragança Paulista</span>
+          <span class="org-sub">dispensa de licitação — acompanhar</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Acompanhar o andamento da dispensa até sair o resultado.
+          <span class="row-note">Número do processo e portal ainda não confirmados.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal">—</div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-08-31-sao-sebastiao-transito" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">São Sebastião</span>
+          <span class="org-sub">Trânsito — acompanhar pregão</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Acompanhar o andamento do pregão de uniformes do trânsito até sair o resultado.
+        </div>
+        <div class="cell cell-portal" data-label="Portal">—</div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-30-porto-feliz" data-date="2026-09-30T09:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">30/09</span><span class="session-dow">qua</span><span class="session-time">09:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Porto Feliz</span>
+          <span class="org-sub">Secretaria de Governo</span>
+          <span class="proc-code">PE 54/2026 · Proc. 11.681/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes para merendeiras.
+          <span class="row-note">Dividido em grupos. Preferência ME/EPP.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bllcompras.com/Participant" target="_blank" rel="noopener">BLL (bll.org.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Amanhã</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-01-presidente-epitacio" data-date="2026-10-01T08:30:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">01/10</span><span class="session-dow">qui</span><span class="session-time">08:30</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Presidente Epitácio</span>
+          <span class="org-sub">Secretaria Municipal de Obras e Infraestrutura</span>
+          <span class="proc-code">PE 075/2026 (2ª edição) · Proc. 104/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Registro de preços para aquisição futura e fracionada de uniformes profissionais para os servidores da Secretaria de Obras e Infraestrutura.
+          <span class="row-note">Julgamento por menor preço por lote.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://iam.secure.portaldecompraspublicas.com.br/realms/Portal/protocol/openid-connect/auth?client_id=aspclient&redirect_uri=https://operacao.portaldecompraspublicas.com.br/18/loginext/oAuth/&response_type=code&scope=openid" target="_blank" rel="noopener">Portal de Compras Públicas</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 2 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-01-sao-jose-dos-campos" data-date="2026-10-01T08:30:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">01/10</span><span class="session-dow">qui</span><span class="session-time">08:30</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">São José dos Campos</span>
+          <span class="org-sub">Mobilidade Urbana — agentes de trânsito</span>
+          <span class="proc-code">PE 195/SGAF/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Confecção e fornecimento de itens essenciais do uniforme dos agentes de mobilidade.
+          <span class="row-note">Propostas até 08:29; abertura às 08:30; disputa às 08:40. Portal próprio com custo de uso para o licitante (ver item 3.3.1 do edital).</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal">Portal próprio (licitacaosaojosedoscampos.com.br)</div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 2 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-08-fernandopolis" data-date="2026-10-08T08:30:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">08/10</span><span class="session-dow">qui</span><span class="session-time">08:30</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Fernandópolis</span>
+          <span class="org-sub">Saúde, Assistência Social, Trânsito e Procon</span>
+          <span class="proc-code">PE 079/2026 · Proc. 8762/2026 · UASG 986411</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Registro de preços para confecção e fornecimento de uniformes funcionais e acessórios de identificação institucional para as secretarias municipais.
+          <span class="row-note">Propostas até 08:29; abertura às 08:30.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br (UASG 986411)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 9 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-08-guarulhos-gcm" data-date="2026-10-08T09:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">08/10</span><span class="session-dow">qui</span><span class="session-time">09:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Guarulhos</span>
+          <span class="org-sub">Guarda Civil Municipal</span>
+          <span class="proc-code">PE 90164/2026-SFIL · Proc. 1125.2025/0009070-1 · UASG 986477</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes, calçados e EPI.
+          <span class="row-note">Foco no lote 1 (Guarda Civil). Edital menciona amostras — conferir exigência e prazo.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br (UASG 986477)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 9 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-08-pederneiras" data-date="2026-10-08T09:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">08/10</span><span class="session-dow">qui</span><span class="session-time">09:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Pederneiras</span>
+          <span class="org-sub">Coordenadoria de Alimentação Escolar</span>
+          <span class="proc-code">PE 89/2026 · UASG 986835</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes para os funcionários da Coordenadoria de Alimentação Escolar.
+          <span class="row-note">Exclusivo ME/EPP. Menor preço por item.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br (UASG 986835)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 9 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-09-toledo-pr" data-date="2026-10-09T08:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">09/10</span><span class="session-dow">sex</span><span class="session-time">08:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Toledo (PR)</span>
+          <span class="org-sub">Assistência Social — SUAS</span>
+          <span class="proc-code">Pregão 82/2026 · SEI 01.03.027439/2026-79</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Registro de preços (12 meses) para uniformes e mochilas dos servidores e camisetas para eventos e campanhas.
+          <span class="row-note">Abertura às 08:00; disputa às 08:30. Lotes 22 e 33 ampla concorrência; demais lotes exclusivos/cota ME/EPP com prioridade para empresas de Toledo.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bllcompras.com/Participant" target="_blank" rel="noopener">BLL (bll.org.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 10 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-09-taubate" data-date="2026-10-09T08:30:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">09/10</span><span class="session-dow">sex</span><span class="session-time">08:30</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Taubaté</span>
+          <span class="org-sub">Secretaria Municipal do Meio Ambiente</span>
+          <span class="proc-code">PE 218/2026 · Proc. 23.717/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes para os servidores da Secretaria do Meio Ambiente e dos Pontos de Entrega Voluntária.
+          <span class="row-note">Exclusiva ME/EPP. Sem amostras, mas exige catálogo/ficha técnica. Propostas até 09/10 às 08:29.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bbmnet.com.br/" target="_blank" rel="noopener">novoBBMNET (novobbmnet.com.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 10 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-09-itatiba" data-date="2026-10-09T09:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">09/10</span><span class="session-dow">sex</span><span class="session-time">09:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Itatiba</span>
+          <span class="org-sub">Secretaria de Obras</span>
+          <span class="proc-code">PE 65/2026 · Edital 88/2026 · Proc. 4.604/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes para os agentes municipais de trânsito e a equipe de topografia, com entrega parcelada.
+          <span class="row-note">Exclusivo ME/EPP. Propostas até 08:50; abertura às 09:00; fase competitiva às 09:10.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bbmnet.com.br/" target="_blank" rel="noopener">BBMNET (Bolsa Brasileira de Mercadorias)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 10 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-10-09-americo-brasiliense" data-date="2026-10-09T14:00:00-03:00">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">09/10</span><span class="session-dow">sex</span><span class="session-time">14:00</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Américo Brasiliense</span>
+          <span class="org-sub">Prefeitura Municipal</span>
+          <span class="proc-code">PE 24/2026 · Proc. 84/2026</span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Registro de preços para uniformes operacionais personalizados: camisetas PA e PV com faixa refletiva, calça cargo e camisa manga longa tipo jaleco (4 lotes).
+          <span class="row-note">Propostas até 13:30; sessão às 14:00. Lotes 1 a 4 exclusivos ME/EPP. Edital tem checklist de avaliação de amostras (Anexo VII).</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bnccompras.com/Home/Login" target="_blank" rel="noopener">BNC (bnc.org.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 10 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-29-araraquara-daae" data-date="2026-10-13T23:59:00-03:00" data-critical="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">13/10</span><span class="session-dow">ter</span><span class="session-time">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Araraquara — DAAE</span>
+          <span class="org-sub">entrega de amostras — MWT venceu</span>
+          <span class="proc-code">PE 058/2026 · Proc. DAAE 2.331/2026</span>
+          <span class="tags"><span class="tag tag-critical">Entrega de amostras</span></span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          MWT venceu o pregão de uniformes do DAAE. Entregar amostras até 13/10.
+          <span class="row-note">Sessão foi em 29/09. Prazo final das amostras: 13/10.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal">Portal próprio (araraquaradaae.eportal.net.br)</div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Em 14 dias</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-25-hospital-usp" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Hospital Universitário da USP</span>
+          <span class="org-sub">acompanhar pregão — sessão realizada em 25/09</span>
+          <span class="proc-code">PE 102150-224/2026 · UASG 102150</span>
+          <span class="tags"><span class="tag tag-new">Novo</span></span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Fornecimento de calças e blusas de privativo (uniforme), diversos tamanhos. Sessão já ocorreu; acompanhar até sair o resultado.
+          <span class="row-note">Ampla concorrência (sem preferência ME/EPP).</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br (UASG 102150)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-28-curitiba-moletons" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Curitiba (PR) — Casa Civil</span>
+          <span class="org-sub">acompanhar pregão — sessão realizada em 28/09</span>
+          <span class="proc-code">PE COMPRAS.GOV 7/2026 · GMS 1355/2026</span>
+          <span class="tags"><span class="tag tag-new">Novo</span></span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de 350 moletons para ações comemorativas do Dia do Servidor Público. Sessão já ocorreu; acompanhar até sair o resultado.
+          <span class="row-note">Exclusivo ME/EPP. Exige amostra do objeto licitado.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-29-botucatu-gcm" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Botucatu</span>
+          <span class="org-sub">Guarda Civil Municipal — sessão realizada em 29/09</span>
+          <span class="proc-code">PE 271/2026 · Proc. 15.996/2026 · UASG 986249</span>
+          <span class="tags"><span class="tag tag-new">Novo</span></span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Aquisição de uniformes para a Guarda Civil Municipal (GCM). Sessão já ocorreu; acompanhar até sair o resultado.
+          <span class="row-note">Itens com participação exclusiva ME/EPP (parcial). Confirmar exigência de amostra.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://www3.comprasnet.gov.br/sicaf-web/" target="_blank" rel="noopener">Compras.gov.br (UASG 986249)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+
+      <article class="row" role="row" data-id="2026-09-29-saae-barra-mansa" data-retorno="true">
+        <div class="cell cell-session" data-label="Sessão">
+          <span class="session-date">—</span>
+        </div>
+        <div class="cell cell-org" data-label="Município / Órgão">
+          <span class="org-name">Barra Mansa (RJ) — SAAE</span>
+          <span class="org-sub">acompanhar pregão — sessão realizada em 29/09</span>
+          <span class="proc-code">PE SRP 056/2026 · Proc. 1608/2026</span>
+          <span class="tags"><span class="tag tag-new">Novo</span></span>
+        </div>
+        <div class="cell cell-object" data-label="Objeto">
+          Eventual aquisição de uniformes (bonés/chapéus, calças jeans e operacionais, camisas, jaqueta corta-vento) — registro de preços. Sessão já ocorreu; acompanhar até sair o resultado.
+          <span class="row-note">Registro de preços (SRP). Confirmar exigência de amostra.</span>
+        </div>
+        <div class="cell cell-portal" data-label="Portal"><a href="https://bbmnet.com.br/" target="_blank" rel="noopener">BBMNET (novobbmnet.com.br)</a></div>
+        <div class="cell cell-status" data-label="Status"><span class="pill" data-pill>Acompanhar diariamente</span></div>
+      </article>
+<!-- LINHAS-FIM -->
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Agenda de licitações da MWT Uniformes.</span>
+    <span>Datas e horários de Brasília. Confira sempre o edital no portal do órgão.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var MONTHS = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+  var DOW = ['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
+  var DAY = 86400000;
+  var board = document.getElementById('board');
+  var rows = Array.prototype.slice.call(board.querySelectorAll('.row'));
+  // guarda o horário original de cada linha antes de redesenhar a célula de data
+  rows.forEach(function (row) {
+    var t = row.querySelector('.session-time');
+    row._time = t ? t.textContent.trim() : '—';
+  });
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  // Tudo é calculado no horário de Brasília, qualquer que seja o fuso do aparelho.
+  function brNow() {
+    var parts = {};
+    new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false })
+      .formatToParts(new Date()).forEach(function (p) { parts[p.type] = p.value; });
+    return Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour % 24, +parts.minute);
+  }
+  function wall(attr) {
+    var m = attr.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+    return Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+  }
+  function dayOf(t) { var d = new Date(t); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); }
+  function ddmm(t) { var d = new Date(t); return pad(d.getUTCDate()) + '/' + pad(d.getUTCMonth() + 1); }
+
+  function render() {
+    var now = brNow();
+    var today = dayOf(now);
+    var monday = today - ((new Date(today).getUTCDay() + 6) % 7) * DAY;
+    var nextMonday = monday + 7 * DAY;
+    var afterNext = monday + 14 * DAY;
+    var groups = {
+      week: document.getElementById('esta-semana'),
+      next: document.getElementById('proxima-semana'),
+      later: document.getElementById('mais-adiante'),
+      watch: document.getElementById('acompanhamento')
+    };
+    var counts = { week: 0, next: 0, later: 0, watch: 0 };
+    var critical = [];
+
+    rows.forEach(function (row) {
+      var attr = row.getAttribute('data-date');
+      var session = row.querySelector('.cell-session');
+      var pill = row.querySelector('[data-pill]');
+      var isCrit = row.getAttribute('data-critical') === 'true';
+      row.classList.toggle('is-critical', isCrit);
+      var key, label, status;
+
+      if (!attr) {
+        key = 'watch'; status = 'watch'; label = 'Acompanhar';
+        session.innerHTML = '<div class="d-none">Sem data</div>';
+      } else {
+        var t = wall(attr);
+        if (t < now) { row.hidden = true; return; }
+        row.hidden = false;
+        var d = new Date(t);
+        var diff = Math.round((dayOf(t) - today) / DAY);
+        if (diff === 0) { status = 'today'; label = 'Hoje'; }
+        else if (diff === 1) { status = 'tomorrow'; label = 'Amanhã'; }
+        else { status = diff <= 7 ? 'week' : 'later'; label = 'Em ' + diff + ' dias'; }
+        if (t < nextMonday) key = 'week';
+        else if (t < afterNext) key = 'next';
+        else key = 'later';
+        var time = row._time && row._time !== '—' ? row._time : (isCrit ? 'prazo final' : '');
+        session.innerHTML = '<div class="d-day">' + pad(d.getUTCDate()) + '</div>' +
+          '<div class="d-meta">' + MONTHS[d.getUTCMonth()] + ' · ' + DOW[d.getUTCDay()] + '</div>' +
+          (time ? '<div class="d-time">' + time + '</div>' : '');
+        if (isCrit) critical.push(row.querySelector('.org-name').textContent + ' até ' + ddmm(t) + ' (' + label.toLowerCase() + ')');
+      }
+      row.setAttribute('data-status', status);
+      if (pill) pill.textContent = label;
+      counts[key]++;
+      groups[key].querySelector('.rows').appendChild(row);
+    });
+
+    Object.keys(groups).forEach(function (k) {
+      var g = groups[k];
+      g.hidden = counts[k] === 0;
+      g.querySelector('.n').textContent = counts[k];
+    });
+    groups.week.querySelector('.range').textContent = ddmm(monday) + ' a ' + ddmm(nextMonday - DAY);
+    groups.next.querySelector('.range').textContent = ddmm(nextMonday) + ' a ' + ddmm(afterNext - DAY);
+    groups.later.querySelector('.range').textContent = 'a partir de ' + ddmm(afterNext);
+    board.hidden = true;
+
+    document.getElementById('sumWeek').textContent = counts.week;
+    document.getElementById('sumNext').textContent = counts.next;
+    document.getElementById('sumLater').textContent = counts.later;
+    document.getElementById('sumWatch').textContent = counts.watch;
+    document.getElementById('sumSamples').textContent = critical.length;
+    var firstCrit = rows.filter(function (r) { return r.classList.contains('is-critical') && !r.hidden; })[0];
+    if (firstCrit) document.getElementById('sumSamplesLink').setAttribute('href', '#' + firstCrit.closest('.group').id);
+
+    var banner = document.getElementById('criticalBanner');
+    banner.hidden = critical.length === 0;
+    document.getElementById('criticalBannerText').textContent = critical.join(' · ');
+
+    document.getElementById('clockDate').textContent = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  render();
+  setInterval(render, 60000);
+})();
+</script>
+
+
+
+</body>
+</html>
