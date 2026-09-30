@@ -814,11 +814,12 @@
         session.innerHTML = '<div class="d-none">Sem data</div>';
       } else {
         var t = wall(attr);
-        if (t < now) { row.hidden = true; return; }
+        // a sessão continua na agenda o dia inteiro; some só no dia seguinte
+        if (dayOf(t) < today) { row.hidden = true; return; }
         row.hidden = false;
         var d = new Date(t);
         var diff = Math.round((dayOf(t) - today) / DAY);
-        if (diff === 0) { status = 'today'; label = 'Hoje'; }
+        if (diff === 0) { status = 'today'; label = t <= now && !isCrit ? 'Iniciada' : 'Hoje'; }
         else if (diff === 1) { status = 'tomorrow'; label = 'Amanhã'; }
         else { status = diff <= 7 ? 'week' : 'later'; label = 'Em ' + diff + ' dias'; }
         if (t < nextMonday) key = 'week';
