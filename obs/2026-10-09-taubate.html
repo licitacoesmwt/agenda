@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Prefeitura de Taubaté</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Prefeitura de Taubaté — Secretaria Municipal do Meio Ambiente e Bem-Estar Animal</h1>
+  <p class="proc">Pregão Eletrônico nº 218/2026 · Proc. Adm. 23.717/2026</p>
+  <p class="obj">Aquisição de uniformes para os servidores da Secretaria de Meio Ambiente e dos PEVs: 100 calças e 200 camisetas em PV com silk (entrega única por AF).</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>sexta-feira, 09/10/2026 às 08:30</dd></div><div class="m"><dt>Portal</dt><dd>BBMNET (novobbmnet.com.br)</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço por item. Disputa aberta, diferença mínima de 1% entre lances (itens 1.6 e 6.13)</dd></div><div class="m"><dt>Participação</dt><dd>Exclusivo ME/EPP</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-warn"><span class="lab">Participar com atenção</span><p>Dá para participar: são dois itens de vestuário que a MWT fabrica, sem amostra e sem exigência econômico-financeira. Decide: esclarecer qual calça vale (o TR pede cargo verde militar/preto, o Anexo I pede outra peça), anexar a ficha técnica com paleta de cores e tabela de medidas em cm na proposta e reemitir o FGTS.</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">8</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Calça: TR e Anexo I descrevem peças diferentes</strong><p>O TR pede calça cargo em brim pesado 100% algodão (ou misto), 5 bolsos, meio-elástico, verde militar ou preto. O Anexo I pede calça brim masculina com elástico e cadarço, 3 bolsos, 67/33, azul royal, tamanho 40. Pedir esclarecimento até 06/10.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Ficha técnica obrigatória na proposta</strong><p>O catálogo com paleta de cores e guia de tamanhos em cm precisa estar anexado no campo &quot;FICHA TÉCNICA&quot; do BBMNET até 09/10 às 08:29. Sem ele, há risco de desclassificação (item 5.4).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Marca: não usar &quot;própria&quot;</strong><p>O campo de marca é obrigatório. Marca &quot;própria&quot; ou genérica obriga a enviar a proposta atualizada em 1 hora, sob pena de desclassificação (itens 5.1.1 e 9.2).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Prazo de 1 hora para habilitação</strong><p>Todos os documentos entram no BBMNET em até 1 hora após os lances. O ideal é anexar tudo junto com a proposta (itens 10.11.1 e 10.17).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>FGTS vence antes da sessão</strong><p>O CRF vence em 04/10. Reemitir e anexar a versão válida. Na AF, CND federal e CNDT precisam estar em dia (item 13.2).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Multas pesadas por atraso</strong><p>0,5% ao dia sobre o valor total do contrato, sem teto diário no edital, mais 5% por descumprimento de cláusula (item 14.6.1). O prazo é de 30 dias corridos após a AF.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Quantidade integral e entrega única</strong><p>É vedado cotar menos que o máximo (item 5.18). O TR prevê fornecimento total por AF. As prorrogações só valem se pedidas via 1DOC antes do vencimento, com prova (itens 5.8 e 5.9).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Camiseta: especificação enxuta</strong><p>O TR só define PV anti-pilling, verde, silk com brasão 10x10 cm na frente e &quot;Meio Ambiente&quot; nas costas. Gramatura, gola e manga não estão especificadas. Declarar tudo na ficha técnica.</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">11/09/2026 08:30</span><span>Início do recebimento de propostas no BBMNET</span></li><li><span class="when">06/10/2026 (ter.)</span><span>Último dia para impugnação/esclarecimento: 3 dias úteis antes da sessão, pelo campo próprio no BBMNET (itens 2.1 e 2.5)</span></li><li><span class="when">09/10/2026 08:29</span><span>Fim do envio de propostas, com a ficha técnica/catálogo anexada</span></li><li><span class="when">09/10/2026 08:30</span><span>Abertura da sessão, seguida da disputa de lances</span></li><li><span class="when">1 hora após o fim dos lances</span><span>Enviar os documentos de habilitação e, se a marca foi &quot;própria&quot; ou genérica, a proposta atualizada. Avisar no chat encerra o prazo (itens 9.2, 10.11 e 10.17)</span></li><li><span class="when">10 min / 3 dias úteis</span><span>Intenção de recurso em 10 min; razões em 3 dias úteis (itens 11.1 e 11.4)</span></li><li><span class="when">5 dias úteis (prorrogáveis)</span><span>Prazo da ME/EPP para regularizar restrição fiscal, se houver (item 10.7)</span></li><li><span class="when">até 4 dias úteis após o chamamento</span><span>Retirar/assinar a Autorização de Fornecimento via 1DOC, com CND federal e CNDT válidas (itens 13.1 e 13.2)</span></li><li><span class="when">30 dias corridos após a AF</span><span>Entrega no Almoxarifado Central (Av. Amador Bueno da Veiga, 1211 – Jaraguá), de 2ª a 6ª, das 8h às 16h (TR, seção V)</span></li><li><span class="when">cronograma mensal</span><span>Pagamento pela data de recebimento da NF: do 1º ao 10º dia, paga no dia 20; do 21º em diante, paga no dia 10 do mês seguinte. Para o 11º ao 20º o edital e o TR divergem (item 5.10 x TR VII)</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Credenciamento prévio no BBMNET (chave e senha)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Confirmar o acesso ativo da MWT à plataforma (itens 3.1 e 4.1).</td></tr><tr><td>Declaração Unificada (Anexo II), assinada em papel timbrado</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Gerar a partir do modelo. Vai junto com os documentos de habilitação (itens 5.22 e 10.15.1).</td></tr><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Contrato social em vigor, consolidado ou com todas as alterações</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">A MWT tem (item 10.12.3).</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Atestado técnico-operacional compatível em características, quantidades e prazos, com no mínimo 50% (50 calças e 100 camisetas). Somatório e NF complementar são aceitos</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">O compilado tem NFs e atestados com mais de 50 calças e mais de 100 camisetas. Separar os atestados de calça e de camiseta (itens 10.13.1 e 10.13.2).</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>CND Federal (tributos federais, contribuições sociais e DAU)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 21/02/2027 (item 10.14.1).</td></tr><tr><td>Certidão de débitos inscritos na dívida ativa estadual (apenas ICMS)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CRDA da PGE-SP válida até 28/10/2026 (item 10.14.2).</td></tr><tr><td>Regularidade municipal de tributos mobiliários</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Certidão negativa mobiliária de Itaquaquecetuba válida até 16/12/2026 (item 10.14.3).</td></tr><tr><td>CRF do FGTS</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Vence em 04/10/2026, antes da sessão. Reemitir (item 10.14.4).</td></tr><tr><td>CNDT</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026 (item 10.14.5).</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Econômico-financeira: balanço e falência</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">O edital não exige qualificação econômico-financeira (item 10).</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Catálogo/ficha técnica de cada item, com paleta de cores, guia de tamanhos em centímetros e todas as características exigidas</td><td>na proposta (anexar no campo &quot;FICHA TÉCNICA&quot; do BBMNET)</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">É obrigatório no cadastro da proposta (itens 5.4 e 5.4.1; TR, seção IV). Montar para a calça cargo e para a camiseta PV anti-pilling.</td></tr><tr><td>Amostras</td><td>edital não especifica</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">O edital marca &quot;Amostras? Não&quot;.</td></tr><tr><td>Laudos, normas técnicas ou CA</td><td>edital não especifica</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Nenhum laudo ou norma é exigido. A garantia segue o Código de Defesa do Consumidor (item 5.11).</td></tr><tr><td>Cor e grade definidas só na AF (calça verde militar ou preto; camiseta verde; tamanhos P a EG/G2 e especiais)</td><td>na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Quantidade por tamanho só na AF. O TR prevê modelagem masculina e feminina (TR, seções 1.2.1 e III).</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">3</span></h2><ul class="plain"><li>Declaração Unificada (Anexo II): inexistência de fato impeditivo, cumprimento dos requisitos de habilitação, enquadramento ME/EPP, limite de faturamento, proposta econômica (art. 63, §1º), menor (art. 7º, XXXIII, da CF), reserva de cargos PcD/aprendiz, ausência de servidor municipal no quadro societário, responsável pela assinatura e dados bancários</li><li>Compromisso de assinatura do Termo de Ciência e Notificação do TCE-SP (Anexo III; facultativo)</li><li>Declarações online do sistema BBMNET, se houver (item 5.21)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>No BBMNET: valor unitário e total com 2 casas decimais e a MARCA de fato (itens 5.1.1 e 5.3.1)</li><li>Anexar a ficha técnica/catálogo (paleta de cores, guia de tamanhos em cm, características) no campo &quot;FICHA TÉCNICA&quot; (item 5.4)</li><li>Cotar a quantidade máxima de cada item: 100 calças e 200 camisetas (item 5.18)</li><li>Validade mínima de 90 dias (itens 5.7 e 9.4.4)</li><li>Proposta final (Anexo I): razão social, CNPJ, IE/IM, endereço, telefone, e-mail, preço unitário e total, valor global e descrição que comprove o atendimento (item 9.4)</li><li>Dados do responsável pela assinatura (nome, RG, CPF, e-mail, cargo) e banco/agência/conta (itens 9.4.5 e 9.4.6)</li><li>Prazo de entrega de 30 dias corridos após a AF e garantia pelo CDC</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: taubate aquisicao 09-10.pdf (34 p.): edital pp. 1–17 (preâmbulo, itens 1–5, 9, 10, 13, 14); Anexo I p. 20 (tabela em imagem); Anexo II Declaração Unificada pp. 22–23; Anexo III p. 24; Anexo V TR pp. 27–34 (1.2.1, III, IV, V, VII)</p>
+</main>
+</body>
+</html>

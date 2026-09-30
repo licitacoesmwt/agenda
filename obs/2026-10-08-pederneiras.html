@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Prefeitura Municipal de Pederneiras/SP</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Prefeitura Municipal de Pederneiras/SP — Coordenadoria de Alimentação Escolar</h1>
+  <p class="proc">Pregão Eletrônico nº 89/2026 · Proc. Adm. 3536703.415.00007491/2026-45 · Compras.gov.br 986835-31/2026</p>
+  <p class="obj">Aquisição única de uniformes para a merenda escolar: aventais, calças jeans e legging, camisetas polo piquet e PA e jaleco (9 itens).</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>quinta-feira, 08/10/2026 às 09:00</dd></div><div class="m"><dt>Portal</dt><dd>Compras.gov.br (www.gov.br/compras) — UASG 986835</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço por item — disputa aberta e fechada</dd></div><div class="m"><dt>Participação</dt><dd>Exclusivo ME/EPP/MEI (com preferência de até 5% para ME/EPP sediada em Pederneiras)</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-warn"><span class="lab">Participar com atenção</span><p>Dá para participar: exclusivo ME/EPP, habilitação simples (sem técnica e sem balanço) e sem amostra na licitação. O que decide: reemitir o FGTS (vence 04/10) e ter o SICAF ativo; na execução, o prazo é curto e o contrato de 60 dias tem multa quase automática.</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">12</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>FGTS vence antes da sessão</strong><p>O CRF vale até 04/10/2026 e a sessão é em 08/10. Reemitir e atualizar no SICAF antes de enviar a proposta.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Multa quase automática por atraso ou qualidade</strong><p>Matriz de riscos: produto insatisfatório leva multa obrigatória de 30% do valor do produto, reduzível até 10% (22.1–22.4). Entrega fora do prazo equivale a deficiência qualitativa (22.5). Mora de 1% ao dia até 30% (21.3).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Prazo curto e contrato de só 60 dias</strong><p>Entrega única em 30 dias da AF, incluindo a prova de tamanhos antes de produzir. Com mais de 30 dias de atraso vira inadimplemento absoluto (21.3.2). A vigência de 60 dias quase não prorroga.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Preferência para ME/EPP local</strong><p>ME/EPP de Pederneiras com proposta até 5% acima da melhor pode cobrir o lance da MWT e levar o item (8.2.6 e 10.2, Lei Municipal 3.305/2015).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Item pode ser repetido se não houver 3 ME/EPP de SP</strong><p>Se não houver pelo menos 3 ME/EPP competitivas sediadas em SP no item, ele não é adjudicado e a licitação é repetida (2.5).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Prazos de 2 horas na sessão</strong><p>2 h para a proposta ajustada (8.6.5) e mais 2 h para os documentos fora do SICAF (8.7). Acompanhar a sessão ao vivo, com proposta e declarações prontas em papel timbrado.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Subcontratação vedada</strong><p>É vedada a subcontratação do objeto (3.1; contrato cl. 6ª, VI). Jeans 14 oz e legging devem ser produção própria, ou revenda com marca e fabricante declarados na proposta.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Especificações com pontos duvidosos</strong><p>Item 4 pede legging &#x27;92% algodão e 8% elastano&#x27; e &#x27;confeccionada em suplex&#x27;. O tamanho &#x27;especial&#x27; dos itens 5, 6, 7 e 9 não está definido. Item 9 não diz como aplicar o brasão na manga. Esclarecer até 05/10.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Entrega: dias úteis x dias corridos</strong><p>TR 4 fala em 30 dias úteis da AF; o contrato (cl. 16ª, II), em 30 dias corridos. Planejar pelos corridos. O recebimento é só das 06:30 às 10:30.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Multa rescisória e cobrança rápida</strong><p>Multa rescisória de até 20% sobre o saldo (contrato cl. 11ª, §3º). Multas são pagas em 5 dias e podem ser descontadas de outros contratos com o Município (21.5.2 e 21.8.2).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Cadastro no Sei/Cidades para comunicações</strong><p>Requerimentos do fornecedor durante o contrato devem ser feitos pelo peticionamento eletrônico do Sei/Cidades de Pederneiras (TR 6).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Cotação da quantidade total</strong><p>Não se aceita cotação abaixo da quantidade prevista (7.1.7). Preço com no máximo 2 casas decimais (7.1.2.1).</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">até 05/10/2026</span><span>Esclarecimentos: até 3 dias úteis antes da abertura, de preferência por compras@pederneiras.sp.gov.br (4.1). Impugnação: o edital não fixa data; prazo legal de 3 dias úteis</span></li><li><span class="when">08/10/2026 09:00</span><span>Fim do envio da proposta (e dos documentos, se não estiverem no SICAF) e abertura da sessão (6.1 e 6.6)</span></li><li><span class="when">08/10/2026 (na sessão)</span><span>Lances: 15 min abertos + até 10 min aleatórios; lance final fechado em 5 min para quem estiver até 10% do melhor (8.1.14 e 8.1.15)</span></li><li><span class="when">2 horas da convocação</span><span>Proposta adequada ao último lance, no modelo do Anexo 02 (8.6.5)</span></li><li><span class="when">2 horas após a proposta atualizada</span><span>Documentos de habilitação que não estiverem no SICAF nem no sistema (8.7)</span></li><li><span class="when">ao final da sessão</span><span>Intenção de recurso; razões em 3 dias úteis (12.1 e 12.3)</span></li><li><span class="when">5 dias úteis (prorrogáveis)</span><span>Regularização fiscal de ME, se houver restrição (10.4)</span></li><li><span class="when">5 dias úteis da convocação</span><span>Assinar o contrato (15.1)</span></li><li><span class="when">30 dias da Autorização de Fornecimento</span><span>Entrega única no Cempra/Coordenadoria (Av. Bernardino Flora Furlan, 1225), das 06:30 às 10:30. TR fala em dias úteis; contrato, em dias corridos</span></li><li><span class="when">60 dias da assinatura</span><span>Vigência do contrato; prorroga só por força maior e similares (16.1; contrato cl. 16ª)</span></li><li><span class="when">5 dias úteis da notificação</span><span>Repor peças recusadas na entrega (TR 7)</span></li><li><span class="when">90 dias do recebimento definitivo</span><span>Garantia mínima; troca de peça defeituosa em até 10 dias (TR 4.1)</span></li><li><span class="when">até 20 dias corridos da entrega</span><span>Pagamento por depósito, com NF atestada (TR 7)</span></li><li><span class="when">60 dias da sessão</span><span>Validade mínima da proposta (7.1.5)</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Contrato social registrado na Junta + documento dos administradores (11.1 c)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Contrato social na pasta (PDF sem texto pesquisável). Conferir se a cláusula de administração nomeia o Yuri; se não, juntar a alteração.</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>Inscrição no CNPJ (11.2 a)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Impressão de 15/05/2024. Certidão sem validade vale 90 dias da emissão (11.5 a), então reemitir.</td></tr><tr><td>Inscrição estadual da sede (11.2 b)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">CADESP ativo. Reemitir com data recente pela regra dos 90 dias (11.5 a).</td></tr><tr><td>Regularidade com a Fazenda Estadual (11.2 c)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CRDA válida até 28/10/2026.</td></tr><tr><td>CRF do FGTS (11.2 d)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">VENCE EM 04/10/2026, antes da sessão de 08/10. Reemitir e atualizar no SICAF.</td></tr><tr><td>CND Federal/Dívida Ativa, incluindo INSS (11.2 e)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 21/02/2027.</td></tr><tr><td>CNDT (11.2 f)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026.</td></tr><tr><td>CND Municipal</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Não exigida neste edital.</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Certidão negativa de falência do distribuidor da sede, em nome da matriz (11.3 a)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Emitida em 13/08/2026. Sem validade impressa, vale 90 dias da entrega dos documentos (até ~11/11).</td></tr><tr><td>Balanço / índices</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Não exigidos.</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Qualificação técnica / atestados</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Não exigida.</td></tr><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Credenciamento no SICAF e no Compras.gov.br (2.1)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">É condição de participação. Confirmar SICAF ativo e com certidões atualizadas, sobretudo o FGTS.</td></tr><tr><td>Declarações em papel timbrado assinadas pelo representante (11.4 a–h; Anexos 03 e 04)</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">Gerar a declaração unificada (Anexo 03) e a de ME/EPP (Anexo 04).</td></tr><tr><td>Sem sanção no CEIS/CNEP (11.5 c)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Consulta feita pelo pregoeiro.</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Especificação e marca de cada item no campo próprio do sistema</td><td>na proposta</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Sem especificação e marca, a proposta é desclassificada (9.2).</td></tr><tr><td>Catálogo, folheto ou prospecto com marca, modelo, tipo e fabricante</td><td>se o pregoeiro pedir, &#x27;imediatamente&#x27; (8.4)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Deixar a ficha de cada item pronta antes da sessão.</td></tr><tr><td>Grade de tamanhos ou amostras para prova</td><td>do vencedor, após a AF e antes da produção (TR 3 e 5; contrato cl. 16ª, III)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">O tempo da prova conta dentro dos 30 dias de entrega. Arte do bordado e do silk é fornecida pelo Município.</td></tr><tr><td>Laudos / normas técnicas</td><td>—</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Edital não exige laudo nem norma específica.</td></tr><tr><td>Garantia de 90 dias contra defeito de tecido, costura, bordado e estampa</td><td>após o recebimento definitivo</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Troca em até 10 dias (TR 4.1).</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">5</span></h2><ul class="plain"><li>Declaração unificada (Anexo 03, item 11.4 a–g): cumpre os requisitos de habilitação; inexistência de fato impeditivo/inidoneidade; não emprega menor (art. 7º, XXXIII, CF); apta a emitir NF-e; não tem servidor municipal de Pederneiras no quadro; cumpre reserva de cargos PcD/reabilitado; proposta cobre integralmente os custos trabalhistas</li><li>Declaração de enquadramento ME/EPP e de não ter ultrapassado o limite de receita em contratos públicos no ano (Anexo 04, item 11.4 h)</li><li>Declaração ME/EPP e regime de tributação em campo próprio do sistema (6.3 e 2.7)</li><li>Declaração de optante pelo Simples Nacional, para não reter IR na NF (20.3.1; na fase de pagamento)</li><li>Termo de Ciência e de Notificação — TCE-SP (Anexo 06, na contratação)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>No sistema: preço unitário por item (no máximo 2 casas decimais), marca, modelo e procedência e especificação completa no campo próprio. Sem marca e especificação, é desclassificada (7.1 e 9.2)</li><li>Proposta inicial sem identificar a licitante (8.1.3)</li><li>Informar o regime de tributação no campo próprio, para ter o direito de desempate ME/EPP (2.7)</li><li>Proposta ajustada (Anexo 02): razão social, endereço, CNPJ/IE, telefone e e-mail, número do pregão (7.2 a e b)</li><li>Qualificação do preposto que assinará o contrato: nome, nacionalidade, estado civil, profissão, RG, CPF, domicílio e cargo (7.2 c; Anexo 02)</li><li>Validade mínima de 60 dias (7.1.5)</li><li>Prazo de entrega conforme o TR, contado do recebimento do pedido (7.1.4)</li><li>Preço com frete, impostos e todos os encargos inclusos até o local de entrega em Pederneiras (7.1.2)</li><li>Quantidade integral de cada item cotado (7.1.7)</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: pederneiras 08-10 aquisicao.pdf (texto extraído em ped.txt): Edital PE 89/2026, itens 1 a 23; Anexo 01 TR (itens 1 a 10); Anexos 02 a 06, incluindo a minuta do contrato; DOCUMENTOS_MWT.md (situação em 30/09/2026)</p>
+</main>
+</body>
+</html>

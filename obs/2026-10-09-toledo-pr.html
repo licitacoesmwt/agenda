@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Município de Toledo/PR</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Município de Toledo/PR — diversas secretarias (Administração/Cozinha Social, Assistência Social, Saúde, Educação, Trânsito, FUNREBOM/Bombeiros, Procon e outras)</h1>
+  <p class="proc">Pregão Eletrônico nº 82/2026 (Registro de Preços, 12 meses) · Proc. SEI 01.03.027439/2026-79</p>
+  <p class="obj">Registro de preços de uniformes, mochilas e camisetas para servidores, eventos e campanhas — 91 lotes, 1 item cada.</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>sexta-feira, 09/10/2026 às 08:00</dd></div><div class="m"><dt>Portal</dt><dd>BLL — Bolsa de Licitações e Leilões do Brasil (www.bll.org.br / bllcompras.com)</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço por lote (lance pelo valor do lote) — modo de disputa aberto</dd></div><div class="m"><dt>Participação</dt><dd>Exclusivo ME/EPP com prioridade de até 10% para ME/EPP sediada em Toledo/PR; lotes 22 e 33 em ampla concorrência</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-warn"><span class="lab">Participar com atenção</span><p>Dá para participar: habilitação enxuta (sem atestado, sem balanço) e a MWT tem tudo, só reemitir o FGTS. O que decide é a prioridade de 10% para ME local, a logística de entregas parceladas no Paraná e a escolha de lotes (evitar mochila e itens fora do escopo).</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">12</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Prioridade para ME/EPP de Toledo</strong><p>Exceto nos lotes 22 e 33, ME/EPP sediada em Toledo que fique até 10% acima do melhor lance pode cobrir e levar o lote (itens 7.20 a 7.20.3).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Logística no Paraná, entrega parcelada</strong><p>Pedidos por empenho de cada secretaria, com 30 dias para entregar em até 6 endereços em Toledo/PR (Almoxarifados, Bombeiros, Cozinha Social, Procon, Educação), durante 12 meses.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Multas altas</strong><p>Mora de 0,5%/dia até 15 dias. Compensatória de 20% (inexecução parcial) ou 30% (total) sobre o valor total do empenho (item 23.2.4).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Subcontratação vedada e itens fora do escopo</strong><p>TR 6.7.1 veda subcontratação. Mochila (lote 89) não é fabricada pela MWT; chapéus australianos (lotes 61 e 62) precisam de conferência.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>FGTS vence antes da sessão</strong><p>CRF vence 04/10/2026 e a habilitação só ocorre a partir de 09/10. Reemitir antes de montar a pasta.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Anexo 05 não veio no PDF</strong><p>Edital exige a declaração do Anexo 05 junto com a proposta final (prazo de 2h), mas o PDF pula do Anexo 04 para o 06. Baixar da BLL/PNCP.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Descrições incompletas</strong><p>Colete Defesa Civil (lote 63) só traz cor, tecido e tamanhos. Chapéu (lote 61) está truncado no Anexo 01; o TR completa com logo 6x6 cm. Cabe esclarecimento.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Cotação integral por lote</strong><p>É vedado cotar quantidade menor que o máximo (item 6.5). Vários lotes são grandes (ex.: lote 22 com 4.204 camisetas).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Prazos de 2 horas</strong><p>Proposta final e habilitação têm 2 horas após convocação. Deixar pasta pronta e acompanhar o chat durante a sessão.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Divergência no aviso de atraso</strong><p>TR 7.4 pede aviso de atraso com 10 dias de antecedência; TR 13.1.2 fala em 24 horas. Seguir o mais rígido.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Proposta não pode identificar a empresa</strong><p>Proposta que identifique o licitante é desclassificada (item 7.2.1). Não colocar nome da MWT em descrição nem marca.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Lotes 22 e 33 em ampla concorrência</strong><p>Sem exclusividade ME nem prioridade local; vale só o empate ficto de 5% para ME/EPP (item 7.19).</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">até 06/10/2026</span><span>Impugnação/esclarecimento: até 3 dias úteis antes da abertura, em campo próprio da BLL (item 25.1 e 25.3).</span></li><li><span class="when">09/10/2026 07:00</span><span>Credenciamento na BLL concluído no mínimo 1 hora antes do recebimento das propostas (item 4.2).</span></li><li><span class="when">09/10/2026 08:00</span><span>Limite para cadastrar/substituir proposta e abertura das propostas.</span></li><li><span class="when">09/10/2026 08:30</span><span>Início da disputa: 10 min + prorrogações automáticas de 2 min (item 7.12).</span></li><li><span class="when">2 horas após convocação</span><span>Proposta final ajustada (Anexo 03) + declaração do Anexo 05, por e-mail comissao.licitacao@toledo.pr.gov.br (itens 7.21.4 e 11.1).</span></li><li><span class="when">2 horas úteis após solicitação</span><span>Envio dos documentos de habilitação pelo sistema (item 9.14.1).</span></li><li><span class="when">5 dias úteis após declaração do vencedor</span><span>Regularização fiscal/trabalhista de ME, se houver restrição (item 9.7), prorrogável.</span></li><li><span class="when">15 min após declaração do vencedor</span><span>Intenção de recurso; razões em 3 dias úteis (itens 10.2 e 10.3).</span></li><li><span class="when">3 dias úteis após convocação</span><span>Assinar a Ata no SEI de Toledo como usuário externo (itens 13.1 e 13.10); exige cadastro no PNCP (TR 7.6).</span></li><li><span class="when">até 30 dias após a Nota de Empenho</span><span>Entrega de cada pedido, em até 6 endereços em Toledo/PR (TR 7.2).</span></li><li><span class="when">até 20 dias após a entrega com NF</span><span>Pagamento (TR 8.2.1), condicionado à IN SEFA 001/2023 e 02/2025.</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Contrato social registrado + documento dos administradores, com alterações ou consolidação (9.2.3 e 9.2.10)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Usar a versão consolidada/autenticada.</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>Comprovante de inscrição no CNPJ (9.3.1)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Impressão atual é de 15/05/2024; reemitir.</td></tr><tr><td>Inscrição estadual ou municipal (9.3.2)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CADESP ativo e inscrição municipal.</td></tr><tr><td>CND Federal conjunta RFB/PGFN (9.3.3)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 21/02/2027.</td></tr><tr><td>Regularidade Fazenda Estadual (9.3.4)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CND SP válida até 28/10/2026.</td></tr><tr><td>Regularidade Fazenda Municipal (9.3.5)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Itaquaquecetuba válida até 16/12/2026.</td></tr><tr><td>CRF FGTS (9.3.8)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Vence 04/10/2026, antes da sessão. Reemitir.</td></tr><tr><td>CNDT (9.3.9)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026.</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Certidão negativa de falência do distribuidor da sede; sem validade impressa vale 90 dias da emissão (9.4.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Emitida 13/08/2026 → vale até 11/11/2026. Juntar a complementar.</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Edital não exige qualificação técnica (sem atestado)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Item 9 só pede jurídica, fiscal/trabalhista, falência e declarações.</td></tr><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Declarações Unificadas — Anexo 04 (9.5.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Gerar em papel timbrado; inclui declaração do art. 130 da Lei Orgânica de Toledo.</td></tr><tr><td>Credenciamento na BLL (direto ou via associada) e cadastro PNCP / SEI Toledo para assinar a ata</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Confirmar se a MWT já tem login ativo na BLL.</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Amostra, laudo ou catálogo na licitação</td><td>na proposta</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Edital e TR não exigem. Proposta pede só valor, marca, modelo e descrição.</td></tr><tr><td>Peça-piloto antes da produção, para pedidos de 10+ unidades, se indicada no empenho (TR 6.6)</td><td>na entrega</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Avaliação em 5 dias úteis, até 2 reapresentações; produzir antes da aprovação é por conta da MWT.</td></tr><tr><td>Atender normas do Inmetro (etiquetagem têxtil) e CDC (TR 6.5)</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Etiqueta com composição, tamanho e fabricante.</td></tr><tr><td>Proteção solar do tecido: FPS 30 (lotes 9 e 14), UV 50 (lote 45), UV25 (lote 53), proteção UV (lotes 56 e 57)</td><td>na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Checklist da peça-piloto confere &#x27;Proteção UV&#x27;. Pedir comprovação ao fornecedor do tecido.</td></tr><tr><td>Itens Bombeiro Militar (lotes 2 e 53): Pantone 19-1664, fonte Gotham Black, termocolante neon, brasão CBMPR</td><td>na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Seguir imagens e tabelas do ETP (pág. 118–120 do PDF).</td></tr><tr><td>Mochila (lote 89): garantia mínima de 12 meses</td><td>na entrega</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">MWT não fabrica mochila. Seria revenda, e a subcontratação é vedada.</td></tr><tr><td>Garantia dos demais itens</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Prazo do CDC (TR 10.1). Sem garantia contratual (TR 6.8).</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">4</span></h2><ul class="plain"><li>Declarações Unificadas — inidoneidade, ciência do edital, menor, trabalho degradante, art. 130 da Lei Orgânica, reserva de cargos, enquadramento ME/EPP (Anexo 04)</li><li>Declaração com informações para assinatura da Ata de Registro de Preços (Anexo 05 — modelo não veio no PDF)</li><li>Declaração de enquadramento ME/EPP em campo próprio do sistema BLL (item 5.3)</li><li>Declaração de ciência e atendimento às exigências de habilitação no sistema BLL (item 3.2)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>No sistema: valor do lote, marca, modelo e descrição similar ao TR (item 6.1), sem identificar a empresa</li><li>Cotar 100% da quantidade do lote (item 6.5)</li><li>Validade mínima de 90 dias (item 6.9)</li><li>Proposta final (Anexo 03): unitário com até 3 casas decimais e total em algarismos e por extenso; última folha assinada e demais rubricadas (itens 11.1 e 11.4)</li><li>Proposta final com dados bancários, representante (RG/CPF), CNPJ e IE, marca por item; prazo e local de entrega conforme TR</li><li>Marca, modelo, fabricante e procedência declarados vinculam a contratada (item 11.3.1)</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: toledo 09-10.pdf (139 pág.) — Edital PE 82/2026 itens 2–13, 23 e 25 (pág. 1–25); Anexo 01 (pág. 27–40); TR itens 2, 6–8, 10 e 13–14 (pág. 72–84); ETP/tabelas e checklist (pág. 115–123); Anexos 03, 04 e 06 (pág. 125–139)</p>
+</main>
+</body>
+</html>

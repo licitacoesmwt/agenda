@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Prefeitura do Município de Américo Brasiliense/SP</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Prefeitura do Município de Américo Brasiliense/SP — Departamento de Serviços Urbanos</h1>
+  <p class="proc">Pregão Eletrônico nº 24/2026 (Registro de Preços) · Proc. Licitatório 84/2026 · Proc. Adm. 998/2026</p>
+  <p class="obj">Registro de preços de uniformes operacionais personalizados com faixa refletiva (camisetas PA e PV, calça cargo em brim, camisa tipo jaleco), inclusive para trabalhadores da FUNAP. 4 lotes.</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>sexta-feira, 09/10/2026 às 14:00</dd></div><div class="m"><dt>Portal</dt><dd>BNC — bnc.org.br</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço por lote (valor total do lote) — modo de disputa aberto e fechado</dd></div><div class="m"><dt>Participação</dt><dd>Exclusivo ME/EPP (lotes 1 a 4)</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-warn"><span class="lab">Participar com atenção</span><p>Dá para participar: habilitação simples, atestados sem quantidade mínima e produtos de linha da MWT. O que decide é baixar o Termo de Referência, que é arquivo separado e não veio no PDF, e ter amostra + ficha técnica em 5 dias úteis.</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">8</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Termo de Referência fora do PDF</strong><p>O edital remete tudo ao TR do Proc. Adm. 998/2026, publicado à parte. O arquivo não está na pasta. Sem ele não há gramatura, grade, faixa refletiva nem medidas.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Amostra + documentação em 5 dias úteis</strong><p>1 peça por lote vencido, nos tamanhos definidos, entregue em Américo Brasiliense com ficha técnica/declaração do fabricante. Não se admite trocar produto ou tecido depois (11.5 e 12.5).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Entrega em 15 dias corridos</strong><p>Prazo curto por Ordem de Compra, com personalização em silk e prova digital no 1º pedido (item 18.3).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>FGTS vence antes da sessão</strong><p>CRF vence 04/10/2026. Reemitir; aproveitar para reemitir falência e CNPJ.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Cotação integral e preço único</strong><p>Cotar 100% da quantidade do lote; mesmo preço para todos os tamanhos da grade, inclusive os maiores (itens 8.3 e 8.11).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Multas</strong><p>Mora de 0,5%/dia até 10%. Compensatória de até 10% (parcial relevante) ou até 20% (inexecução total) (item 14.3).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Validade e prazos não definidos no edital</strong><p>Validade mínima de 60 dias. Prazo da proposta readequada e da habilitação fica a critério do pregoeiro — acompanhar o chat da BNC.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Subcontratação sem regra clara</strong><p>Edital é silente. Ata (cl. 21) admite subcontratação só de atividades acessórias &#x27;nos limites do Edital&#x27;.</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">até 06/10/2026</span><span>Esclarecimento/impugnação pela plataforma BNC. O edital diz só &#x27;prazo legal&#x27; (item 3.1); pela Lei 14.133 são 3 dias úteis antes.</span></li><li><span class="when">09/10/2026 13:30</span><span>Limite para envio das propostas na BNC (item 4.1).</span></li><li><span class="when">09/10/2026 14:00</span><span>Sessão pública e disputa aberta e fechada (item 4.2).</span></li><li><span class="when">prazo fixado pelo pregoeiro</span><span>Proposta readequada (Anexo V) assinada; o edital não fixa horas (itens 8.1 e 8.9).</span></li><li><span class="when">até 5 dias úteis após convocação</span><span>Entregar amostra (1 un. por lote) + ficha técnica no Almoxarifado Central, 8h–16h (itens 12.1 e 12.2).</span></li><li><span class="when">até 5 dias úteis após convocação</span><span>Assinar a Ata de Registro de Preços, prorrogável uma vez (item 15.1).</span></li><li><span class="when">2 dias úteis após receber a arte</span><span>Apresentar prova digital antes do 1º fornecimento personalizado (Ata, cl. 10.2).</span></li><li><span class="when">até 15 dias corridos após a Ordem de Compra</span><span>Entrega no Almoxarifado Central de Américo Brasiliense (item 18.3).</span></li><li><span class="when">até 30 dias corridos após a liquidação</span><span>Pagamento (item 20.3).</span></li><li><span class="when">90 dias do recebimento definitivo; troca em 15 dias</span><span>Garantia mínima contra defeito de fabricação; substituição em até 15 dias corridos da notificação (Ata, cl. 16).</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Ato constitutivo registrado + atos de designação dos administradores (9.2 a/b)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Contrato social consolidado/autenticado.</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>Prova de inscrição no CNPJ (9.3 a)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Impressão atual é de 15/05/2024; reemitir.</td></tr><tr><td>Regularidade Federal e Dívida Ativa da União (9.3 b)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 21/02/2027.</td></tr><tr><td>Regularidade Fazenda Estadual, quando pertinente (9.3 c)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CND SP válida até 28/10/2026.</td></tr><tr><td>Regularidade Fazenda Municipal da sede (9.3 d)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 16/12/2026.</td></tr><tr><td>CRF FGTS (9.3 e)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Vence 04/10/2026, antes da sessão. Reemitir.</td></tr><tr><td>CNDT (9.3 f)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026.</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Certidão negativa de falência/recuperação judicial do distribuidor da sede (9.4.1)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Emitida 13/08/2026; edital não especifica validade. Reemitir (TJSP) para não ter discussão.</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Atestado(s) de fornecimento de uniformes, vestuário ou peças confeccionadas; soma permitida, sem quantidade mínima (9.5.1 e 9.5.2)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Compilado de atestados da MWT atende.</td></tr><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Declarações dos Anexos II, III e IV (9.6.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Gerar em papel timbrado.</td></tr><tr><td>Credenciamento ativo na plataforma BNC (item 7.1)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Confirmar login e senha da MWT na BNC.</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Termo de Referência (especificação completa, grade, faixa refletiva, personalização)</td><td>na proposta</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">Arquivo separado, não está na pasta (Anexo I, pág. 18). Baixar na BNC ou no PNCP antes de cotar.</td></tr><tr><td>Amostra: 1 un. por lote — lote 1 M, lote 2 M, lote 3 tam. 42, lote 4 M (item 12.2)</td><td>do vencedor em 5 dias úteis</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">MWT fabrica. Sem amostra no prazo ou com reprovação, a proposta é desclassificada (12.6).</td></tr><tr><td>Ficha técnica, etiqueta, declaração do fabricante ou relatório técnico comprovando composição e gramatura (item 12.4)</td><td>do vencedor, junto com a amostra</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Não exige laudo de laboratório. Pedir ficha/declaração ao fornecedor do tecido.</td></tr><tr><td>Checklist de amostra: tecido, cor azul-royal, medidas, faixa refletiva (largura/fixação), costuras, bolsos, personalização (Anexo VII)</td><td>do vencedor em 5 dias úteis</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Largura e posição da faixa refletiva só no TR.</td></tr><tr><td>Prova digital da personalização (brasão/inscrição em silk) aprovada antes de produzir</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Prazo de 2 dias úteis após receber a arte (Ata, cl. 10.2).</td></tr><tr><td>Tolerância máxima de ±2 cm nas medidas; sem tolerância em composição, gramatura, bolsos e largura mínima da faixa (Ata, cl. 12)</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Inspeção comparada com a amostra aprovada.</td></tr><tr><td>Garantia mínima de 90 dias contra defeitos de fabricação</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Contada do recebimento definitivo. Cobre descostura, rasgo por falha do tecido, soltura de refletivo, zíper/botão e personalização (Ata, cl. 16.3).</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">4</span></h2><ul class="plain"><li>Declarações Diversas — ciência do edital, custos, menor, reserva de cargos, inidoneidade, art. 14, produtos novos, amostra fiel, confidencialidade, veracidade (Anexo II)</li><li>Declaração de Elaboração Independente da Proposta e Integridade (Anexo III)</li><li>Declaração de Enquadramento como ME/EPP (Anexo IV) + declaração no campo da plataforma BNC (item 6.4.4)</li><li>Termo de Ciência e de Notificação — TCESP, na assinatura da Ata (Anexo VIII)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>Por lote: valor total do lote (base da disputa) e valor unitário, até 4 casas decimais; total não pode passar o teto do Anexo V (item 8.2)</li><li>Cotar 100% da quantidade do lote; preço único para todos os tamanhos (itens 8.3 e 8.11)</li><li>Descrição do produto e, se houver, marca e fabricante; se for confecção própria, declarar &#x27;fabricação própria&#x27; (item 8.5)</li><li>Validade mínima de 60 dias da sessão (item 8.10)</li><li>Proposta readequada no modelo do Anexo V: dados da empresa, dados bancários, representante (CPF/RG), assinatura (itens 8.1 e 8.9)</li><li>Preço inclui tecido, confecção, silk, faixas refletivas, embalagem e frete até o Almoxarifado Central (item 8.4)</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: AMERICO BRASILIENSE 09-19 BNC COMPRAS.pdf (53 pág.) — quadro resumo (pág. 1), edital itens 1–20 (pág. 2–17), Anexos II–V (pág. 19–23), Ata cl. 7–16, 21 e 31, Anexos VII–IX. O Termo de Referência (Anexo I) é arquivo separado e não está na pasta.</p>
+</main>
+</body>
+</html>

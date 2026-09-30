@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Prefeitura do Município de Itatiba</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Prefeitura do Município de Itatiba — Secretaria de Obras (Departamento de Trânsito)</h1>
+  <p class="proc">Pregão Eletrônico nº 65/2026 (Edital nº 88/2026) · Proc. Adm. 4.604/2026</p>
+  <p class="obj">Uniformes para agentes municipais de trânsito e equipe de topografia, com entrega parcelada (5 lotes).</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>sexta-feira, 09/10/2026 às 09:00</dd></div><div class="m"><dt>Portal</dt><dd>BBMNET — www.novobbmnet.com.br</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço global por lote — modo aberto; lance pelo valor total do lote (itens 1.2 e 6.9)</dd></div><div class="m"><dt>Participação</dt><dd>Exclusivo ME/EPP (item 2.1)</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-ok"><span class="lab">Dá para participar</span><p>Documentação da MWT atende; o Lote 1 (vestuário) é linha da casa, exceto o cinto de nylon. O que decide: montar amostras dos 11 itens em 15 dias e cumprir 60 dias de entrega com a grade de tamanhos informada só após o contrato; reemitir o FGTS.</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">11</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Amostras de 11 itens em 15 dias</strong><p>Uma amostra de cada item do Lote 1, protocolada em Itatiba em até 15 dias corridos da sessão (7.7). Não entregar = desistência + sanção (7.9 e 10.1.1). Personalização pode ser de outro município.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Entrega em 60 dias com grade só após o contrato</strong><p>Prazo de 60 dias corridos corre da assinatura, mas os tamanhos só vêm depois dela (TR 2.1). O objeto fala em &#x27;entrega parcelada&#x27; e o TR fixa prazo único — esclarecer até 06/10.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Multas de atraso</strong><p>1% ao dia sobre a parcela, até 15 dias; acima disso, rescisão possível. Compensatória de 10% do contrato na inexecução total (TR 8.iv).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Cinto e componentes de terceiros; subcontratação vedada</strong><p>Cinto de nylon com fivela cromada (1.11) é revenda. Subcontratação vedada (minuta, cláusula 4.1): comprar componentes pode, terceirizar a confecção não.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Normas só na calça feminina</strong><p>Item 1.2 cita NBR 15292 (alta visibilidade) e Portaria Inmetro 118/2015 (EPI); o 1.3, igual, não cita. Peça preta com faixa de 4 cm — conferir aderência à norma ou pedir esclarecimento.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Prazos de 2 h no sistema</strong><p>Documentos de habilitação e proposta final ajustada em até 2 h da solicitação, sob pena de desclassificação (8.3.1 e 8.5). Deixar tudo pronto antes da sessão.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Protocolos presenciais em Itatiba</strong><p>Originais/cópias autenticadas em 48 h se não houver autenticação digital (8.9) e amostras em 15 dias — duas idas à Av. Luciano Consoline, 600.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>FGTS vence antes da sessão</strong><p>CRF vence 04/10/2026; sessão em 09/10. Protocolo de solicitação não substitui documento (5.6.3).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Plataforma BBMNET com taxa</strong><p>Credenciamento prévio obrigatório e custo de uso pago pelo licitante à Bolsa Brasileira de Mercadorias (2.2–2.4). Conferir se o acesso da MWT está ativo.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Demais lotes fora do escopo MWT</strong><p>Lote 2 apito metálico, Lote 3 capacete modular com certificado INMETRO, Lote 4 luvas de motociclista — revenda. Lote 5 (capas de chuva) é vestuário impermeável.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Regularidade a cada nota fiscal</strong><p>Cada NF deve ir com CND federal, estadual, FGTS e CNDT (TR 6.g). Pagamento 10 dias após aceite do fiscal.</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">04/10/2026</span><span>Vence o CRF FGTS da MWT — reemitir antes da sessão</span></li><li><span class="when">06/10/2026</span><span>Último dia para impugnação/esclarecimento (3 dias úteis antes) — via BBMNET ou e-mail licitacoes@licitacoes.itatiba.sp.gov.br (11.1/11.3)</span></li><li><span class="when">09/10/2026 08:50</span><span>Limite para cadastro da proposta no BBMNET</span></li><li><span class="when">09/10/2026 09:00</span><span>Abertura das propostas; fase de lances às 09:10 (10 min + prorrogações de 2 min)</span></li><li><span class="when">até 2 h após solicitação do pregoeiro</span><span>Enviar documentos de habilitação e proposta final ajustada pelo sistema (8.3.1 e 8.5)</span></li><li><span class="when">10 min após julgamento / habilitação</span><span>Manifestar intenção de recurso; razões em 3 dias úteis (9.3/9.4)</span></li><li><span class="when">até 48 h após o término da sessão</span><span>Protocolar originais ou cópias autenticadas na Seção de Licitações (9h–17h), se os documentos enviados não tiverem autenticação digital (8.9)</span></li><li><span class="when">até 15 dias corridos após a sessão</span><span>Protocolar amostras (Lote 1 e 5) / catálogos (Lotes 2–4) na Seção de Licitações (7.7). Contagem cai em sábado (24/10) — pela regra do item 12.7 vence no 1º dia útil seguinte; confirmar com o pregoeiro</span></li><li><span class="when">até 5 dias corridos após convocação</span><span>Assinar o contrato (RG/CPF do sócio e e-mail para comunicações) (TR 3.2–3.4)</span></li><li><span class="when">até 60 dias corridos após assinatura</span><span>Entrega no Departamento de Trânsito (Rod. Luciano Consoline, 600); tamanhos informados após a assinatura (TR 2.1/2.2)</span></li><li><span class="when">10 dias após manifestação do fiscal (até 5 dias)</span><span>Pagamento; com cada NF enviar CND federal, estadual, FGTS e CNDT (TR 4.1 e 6.g)</span></li><li><span class="when">90 dias do recebimento definitivo</span><span>Garantia mínima contra defeitos, desbotamento, costuras e refletivos (TR 10.1.10)</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Contrato social registrado + alterações/consolidação + documento dos administradores (5.1 c/g)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Contrato social (há versão autenticada) + CNH do Yuri.</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>Comprovante de inscrição no CNPJ (5.2 a)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Impressão de 15/05/2024; sem validade impressa, o pregoeiro pode aplicar o limite de 180 dias (5.6.1). Reemitir.</td></tr><tr><td>CND conjunta federal / Dívida Ativa da União (5.2 b)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 21/02/2027.</td></tr><tr><td>Regularidade com a Fazenda Estadual da sede (5.2 c)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CRDA válida até 28/10/2026.</td></tr><tr><td>CRF FGTS (5.2 d)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Vence 04/10/2026 — antes da sessão. Reemitir.</td></tr><tr><td>CNDT (5.2 e)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026. Edital não pede CND municipal nem inscrições estadual/municipal.</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Certidão negativa de falência do distribuidor da sede — até 90 dias da emissão (5.3 e 5.6.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Emitida 13/08/2026 → aceita até 11/11/2026. Edital não pede balanço.</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Atestado(s) de aptidão em atividade pertinente, com subscritor identificado (5.4 a)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Sem quantidade mínima. Usar atestados de uniformes do compilado MWT.</td></tr><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Declaração de inexistência de impedimento, em papel timbrado (5.5 a — Anexo III)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Gerar e assinar.</td></tr><tr><td>Originais ou cópias autenticadas em 48 h, se o documento enviado não tiver autenticação digital (8.9.1)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Certidões online são verificáveis; contrato social usar a versão autenticada. Protocolo presencial em Itatiba.</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Amostra de cada item do Lote 1 (11 itens) — qualquer tamanho, personalização não obrigatória (pode ser de outro município)</td><td>do vencedor em até 15 dias corridos da sessão</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Vestuário é linha MWT; cinto de nylon (1.11) é compra de terceiro. Fora do prazo = desclassificação (7.8/7.9).</td></tr><tr><td>Amostra do Lote 5 (conjunto capa de chuva nylon DN70 com solda termoeletrônica; capa sobretudo)</td><td>do vencedor em até 15 dias corridos da sessão</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Lote 5 não admite catálogo — só lotes 2, 3 e 4 (7.7 b).</td></tr><tr><td>Normas citadas na calça feminina (1.2): ABNT NBR 13377:2022, NBR 15292:2023, NBR ISO 13688:2017, Portaria Inmetro 118/2015</td><td>edital não especifica; certificados podem ser exigidos em caso de dúvida (TR 10.1.9)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Laudo não é pedido expressamente. A calça masculina (1.3), igual, não cita normas.</td></tr><tr><td>Tecido ripstop 67/33 hidrorrepelente das camisas: densidade 40x21 fios/cm e tração mínima trama 40 kgf / urdume 70 kgf (NBR 11912)</td><td>na amostra/entrega (laudo não exigido expressamente)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Pedir ficha técnica/laudo ao fornecedor do tecido por segurança.</td></tr><tr><td>Refletivos: faixa 3M prata 4 cm (calças); fio vivo 500 lumens 2 cm (camisas trânsito) e 4 cm (topografia); faixa 50 mm antichama (jaquetas)</td><td>na amostra e na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Comprar refletivo de marca/especificação comprovável.</td></tr><tr><td>Catálogo dos Lotes 2, 3 e 4 (apito, capacete, luvas)</td><td>do vencedor em até 15 dias corridos</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">Não são produtos MWT — só se entrar por revenda.</td></tr><tr><td>Certificado de aprovação INMETRO do capacete (NBR 7471/2001 e Res. CONTRAN 203) — Lote 3</td><td>edital não especifica o momento (&#x27;deverá ser apresentado&#x27;)</td><td class="c"><span class="chip chip-crit">Falta</span></td><td class="note">Certificação do fabricante; fora do escopo MWT.</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">5</span></h2><ul class="plain"><li>Declaração de inexistência de impedimento legal para licitar/contratar, em papel timbrado (Anexo III)</li><li>Declaração de enquadramento como Microempresa ou EPP (Anexo IV)</li><li>Procuração/credenciamento (Anexo II) — só se quem operar não for o sócio</li><li>Declarações no campo do sistema BBMNET: ciência do edital e custos trabalhistas; menor de 18/16 anos; sem trabalho degradante ou forçado; reserva de cargos PcD/reabilitado; ME/EPP apta à LC 123 (3.7 e 3.9)</li><li>Termo de Recebimento do Edital — preencher e enviar a licitacoes@licitacoes.itatiba.sp.gov.br para receber avisos (recomendado)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>No sistema: valor total do lote e marca (4.1); não identificar a empresa na proposta inicial (6.3)</li><li>Modelo Anexo V: dados da empresa, e-mail, telefone e dados bancários; marca, preço unitário e total por item e total do lote</li><li>Cotar todos os itens do lote — lance é pelo valor total do lote (6.9)</li><li>Validade mínima de 60 dias (4.8 e TR 10.1.6)</li><li>Informar marca/modelo e garantia (TR 10.1.4); garantia mínima de 90 dias (TR 10.1.10)</li><li>Incluir frete, carga, descarga, embalagem e seguro (TR 10.1.1); embalagem individual na calça feminina</li><li>Proposta final ajustada ao último lance em até 2 h (8.5)</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: itatiba aquisicao 09-10.pdf (56 p.) — Edital itens 1 a 12 (p. 1–20); Anexo I TR: lotes 1–5 (p. 21–28), documentação complementar 1.2, prazos, contratação, pagamento, sanções, garantia (p. 28–37); Anexos II–V (p. 38–47); minuta de contrato (p. 49–55); termo de recebimento (p. 56).</p>
+</main>
+</body>
+</html>

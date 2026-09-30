@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Observações — Prefeitura da Estância Turística de Presidente Epitácio/SP</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F3F5F8;
+    --surface: #FFFFFF;
+    --ink: #111C2E;
+    --muted: #5B6679;
+    --line: #DCE1E8;
+    --navy: #13284A;
+    --navy-2: #1E3A66;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #AFBCD2;
+    --link: #1C4F9C;
+    --hivis: #E8C31A;
+    --silver: #C3C9D2;
+    --crit: #B42318;
+    --crit-soft: #FCEDEB;
+    --warn: #A64B06;
+    --ok: #1F7A45;
+    --bar: #1E3A66;
+    --bar-soft: #E3E8F0;
+    --on-bar: #FFFFFF;
+    --st-1: #86b6ef;
+    --st-2: #2a78d6;
+    --st-3: #104281;
+    --tag-bg: #E6ECF5;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    --font-body: 'Barlow', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D131E;
+      --surface: #141C2A;
+      --ink: #E7EBF1;
+      --muted: #98A3B5;
+      --line: #263145;
+      --navy: #0E1D38;
+      --navy-2: #1B3259;
+      --on-navy: #FFFFFF;
+      --on-navy-muted: #A3B2CB;
+      --link: #8DB3F5;
+      --hivis: #E8C31A;
+      --silver: #7D8696;
+      --crit: #F58B7F;
+      --crit-soft: #35171499;
+      --warn: #F2A65A;
+      --ok: #6CCB94;
+      --bar: #7FA3DC;
+      --bar-soft: #1C2638;
+      --on-bar: #0D131E;
+      --st-1: #184f95;
+      --st-2: #3987e5;
+      --st-3: #9ec5f4;
+      --tag-bg: #1F2B40;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D131E;
+    --surface: #141C2A;
+    --ink: #E7EBF1;
+    --muted: #98A3B5;
+    --line: #263145;
+    --navy: #0E1D38;
+    --navy-2: #1B3259;
+    --on-navy: #FFFFFF;
+    --on-navy-muted: #A3B2CB;
+    --link: #8DB3F5;
+    --hivis: #E8C31A;
+    --silver: #7D8696;
+    --crit: #F58B7F;
+    --crit-soft: #35171499;
+    --warn: #F2A65A;
+    --ok: #6CCB94;
+    --bar: #7FA3DC;
+    --bar-soft: #1C2638;
+    --on-bar: #0D131E;
+    --st-1: #184f95;
+    --st-2: #3987e5;
+    --st-3: #9ec5f4;
+    --tag-bg: #1F2B40;
+    color-scheme: dark;
+  }
+
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+  .top { background: var(--navy); color: var(--on-navy); border-bottom: 4px solid var(--hivis); }
+  .top .wrap { padding-block: 22px 26px; }
+  .back { color: var(--on-navy-muted); text-decoration: none; font-size: 14px; }
+  .back:hover { color: var(--on-navy); text-decoration: underline; }
+  .kick { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--on-navy-muted); margin: 14px 0 4px; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.08; margin: 0; text-wrap: balance; }
+  .proc { margin: 6px 0 0; color: var(--on-navy-muted); font-size: 14.5px; }
+  .obj { margin: 10px 0 0; font-size: 16px; max-width: 70ch; }
+  .metabar { background: var(--surface); border-bottom: 1px solid var(--line); }
+  dl.meta { display: grid; grid-template-columns: 1fr 1fr 1.4fr 1.4fr; gap: 0 28px; margin: 0; padding-block: 14px; }
+  .meta .m { padding: 0; }
+  .meta dt { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .meta dd { margin: 2px 0 0; font-size: 14.5px; }
+  main { padding-block: 24px 48px; }
+  .verdict { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--vc); padding: 16px 20px; margin-bottom: 28px; }
+  .verdict .lab { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--vc); white-space: nowrap; padding-top: 1px; }
+  .verdict p { margin: 0; }
+  .v-ok { --vc: var(--ok); } .v-warn { --vc: var(--warn); } .v-crit { --vc: var(--crit); }
+  .sec { margin-bottom: 30px; }
+  .sec h2 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+  .sec h2 .n { color: var(--muted); font-weight: 600; margin-left: 4px; }
+  .atts { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .att { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--line); }
+  .att:first-child { border-top: 0; }
+  .att p { margin: 3px 0 0; color: var(--ink); }
+  .att-g { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding-top: 3px; }
+  .att-alta .att-g { color: var(--crit); } .att-media .att-g { color: var(--warn); }
+  .times { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); }
+  .times li { display: grid; grid-template-columns: 220px 1fr; gap: 14px; padding: 10px 18px; border-top: 1px solid var(--line); }
+  .times li:first-child { border-top: 0; }
+  .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 14px; border-top: 1px solid var(--line); }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bar-soft); }
+  tr.grp th { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy-2); background: var(--paper); }
+  td.note { color: var(--muted); }
+  .c { text-align: center; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border: 1px solid currentColor; border-radius: 3px; }
+  .chip-ok { color: var(--ok); } .chip-warn { color: var(--warn); } .chip-crit { color: var(--crit); } .chip-muted { color: var(--muted); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plain { margin: 0; padding: 12px 18px 12px 36px; background: var(--surface); border: 1px solid var(--line); }
+  .plain li { margin: 4px 0; }
+  .foot { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 16px; }
+    h1 { font-size: 28px; }
+    dl.meta { grid-template-columns: 1fr; gap: 10px; }
+    .times li { grid-template-columns: 1fr; gap: 2px; }
+    .two { grid-template-columns: 1fr; }
+    .verdict { flex-direction: column; gap: 6px; }
+    .att { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="back" href="../">← Agenda de licitações</a>
+  <p class="kick">Observações da licitação</p>
+  <h1>Prefeitura da Estância Turística de Presidente Epitácio/SP — Secretaria Municipal de Obras e Infraestrutura</h1>
+  <p class="proc">Pregão Eletrônico nº 075/2026 (2ª edição) · Proc. Licitatório nº 104/2026 · Registro de Preços</p>
+  <p class="obj">Registro de preços (12 meses) de uniformes profissionais para os servidores da Secretaria de Obras e Infraestrutura — 20 itens em lote único.</p>
+</div></header>
+<div class="metabar"><div class="wrap"><dl class="meta"><div class="m"><dt>Sessão</dt><dd>quinta-feira, 01/10/2026 às 08:30</dd></div><div class="m"><dt>Portal</dt><dd>Portal de Compras Públicas (portaldecompraspublicas.com.br)</dd></div><div class="m"><dt>Critério</dt><dd>Menor preço por lote (lote único com 20 itens) — disputa aberta</dd></div><div class="m"><dt>Participação</dt><dd>Ampla concorrência (ME/EPP com empate ficto de 5%; consórcio vedado)</dd></div></dl></div></div>
+<main class="wrap">
+  <div class="verdict v-warn"><span class="lab">Participar com atenção</span><p>Dá para participar: habilitação enxuta (sem qualificação técnica e sem balanço) e todos os documentos da MWT estão válidos em 01/10. O que decide: cotar os 20 itens do lote e entregar amostras de todos os modelos em 5 dias úteis em Presidente Epitácio.</p></div>
+  <section class="sec"><h2>Pontos de atenção <span class="n">13</span></h2><ul class="atts"><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Proposta e habilitação vão juntas até 08:30 de 01/10</strong><p>Todos os documentos entram no sistema junto com a proposta até a abertura (4.1). Depois disso é vedado incluir documento que deveria constar (25.15). Proposta que identifique a licitante é desclassificada (6.2.1).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Amostras de todo o lote em 5 dias úteis, longe da fábrica</strong><p>Amostras de todos os modelos, com personalização, entregues em Presidente Epitácio (10.1). Por ser lote único, amostra reprovada em um item compromete o lote inteiro. Deixar de apresentar amostra é infração (24.1.2.4).</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Lote único com 20 itens, incluindo jeans e dry fit com zíper</strong><p>É preciso cotar todos os itens: camisas de brim com refletivo, dry fit UV com gola padre e zíper, polos piquet e 100% algodão, malha fria PV, calça brim com joelho acolchoado e calças jeans masculina e feminina.</p></div></li><li class="att att-alta"><span class="att-g">Alta</span><div><strong>Multas altas sobre o valor do contrato</strong><p>Multa de 10% do contrato, subindo para 15% ou 30% em algumas infrações, a recolher em 15 dias úteis (24.4). O item remete a subitens 26.1.x que não existem, então fica ambíguo qual percentual vale para cada infração.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Descrições contraditórias nos itens de brim</strong><p>Item 3 é &#x27;manga curta&#x27;, mas o texto diz &#x27;mangas longas com punho&#x27;. Os itens 1 a 3 se chamam &#x27;camiseta&#x27;, mas são de brim com gola italiana. O prazo de esclarecimento já passou, então seguir o título e registrar na descrição da proposta.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Pagamento divergente e texto copiado de edital de veículos</strong><p>Edital: pagamento até o dia 20 do mês seguinte ao &#x27;aceite dos veículos&#x27; (21.1). TR: 20 dias úteis de liquidação + até o 20º dia útil (TR 8). Pelo item 25.23, prevalece o edital.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Prazos e vigência inconsistentes</strong><p>Substituição: 3 dias (22.3) x 10 dias corridos (TR 5). Vigência: fim do exercício (20.6) x 12 meses (contrato) x 1 ano (Ata). Fornecimento &#x27;integral e imediato&#x27; (22.1) x parcelado sob demanda (TR 6).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Validade de 60 dias para documento sem data de validade</strong><p>Qualquer documento sem validade impressa vale 60 dias da emissão, exceto CNPJ e atestados (11.1.2.14). Reemitir CADESP e inscrição municipal. A falência de 13/08 vale até 12/10.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Entregas parceladas com frete até Presidente Epitácio</strong><p>Registro de preços com ordens de fornecimento sob demanda por 12 meses. Cada OF tem 30 dias corridos de prazo e todo o transporte, carga e descarga é da contratada (TR 5 e 6).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Exequibilidade exige comprovação documental em 3 dias úteis</strong><p>Se o pregoeiro suspeitar do preço, a MWT tem de apresentar planilha de custos + contratos e notas análogas + tabela de mercado, no mínimo &#x27;a, b e c&#x27; ou &#x27;b, c e d&#x27; (8.2 e 8.3).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Subcontratação sem autorização dá rescisão</strong><p>Na minuta do contrato (cláusula 7ª, VI), subcontratar sem autorização expressa é motivo de rescisão. Se terceirizar alguma etapa, como jeans ou sublimação, pedir autorização.</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Reserva de cargos (PcD, reabilitado e aprendiz) cobrada na execução</strong><p>O TR exige cumprir e comprovar a reserva legal de cargos no prazo que a fiscalização fixar (TR 10).</p></div></li><li class="att att-media"><span class="att-g">Média</span><div><strong>Valor estimado diferente no edital e no TR</strong><p>O total do item 1.2 do edital não bate com o total da tabela do TR (item 3). Serve de referência para aceitação (7.2): conferir o valor unitário de cada item no TR.</p></div></li></ul></section><section class="sec"><h2>Prazos</h2><ol class="times"><li><span class="when">até 3 dias úteis antes da sessão (≈28/09/2026)</span><span>Esclarecimentos e impugnação — prazo encerrado (item 17.1 e 17.4)</span></li><li><span class="when">01/10/2026 08:30</span><span>Fim do envio de proposta + documentos de habilitação (juntos, no sistema) e início da disputa (itens 4.1 e preâmbulo)</span></li><li><span class="when">01/10/2026 (na sessão)</span><span>Lances: modo aberto, 10 min + prorrogações de 2 min (itens 6.9 a 6.11)</span></li><li><span class="when">prazo fixado pelo pregoeiro</span><span>Proposta ajustada ao último lance, assinada, com dados bancários (itens 6.26.2 e 12.1)</span></li><li><span class="when">até 5 dias úteis da convocação</span><span>Amostras de todos os modelos ofertados na Secretaria de Obras (item 10.1; TR admite prorrogação por igual período)</span></li><li><span class="when">3 dias úteis</span><span>Comprovar exequibilidade, se o pregoeiro suspeitar de preço inexequível (item 8.2)</span></li><li><span class="when">mín. 30 min após declaração do vencedor</span><span>Intenção de recurso; razões em 3 dias (item 14)</span></li><li><span class="when">5 dias úteis (prorrogáveis)</span><span>Regularização fiscal/trabalhista de ME, se houver restrição (item 11.3.6.1)</span></li><li><span class="when">5 dias úteis da convocação</span><span>Assinar Ata/contrato ou aceitar a nota de empenho (item 20.2)</span></li><li><span class="when">30 dias corridos da Ordem de Fornecimento</span><span>Entrega no Almoxarifado Central — Rua Belo Horizonte, 7-51, Vila Palmira (item 22.2; TR item 4)</span></li><li><span class="when">3 dias (edital) ou 10 dias corridos (TR)</span><span>Substituição de peças recusadas — prazos divergentes (item 22.3 x TR item 5)</span></li><li><span class="when">até o dia 20 do mês seguinte à entrega</span><span>Pagamento, segundo o edital (item 21.1); o TR prevê outro prazo</span></li><li><span class="when">60 dias</span><span>Validade mínima da proposta (item 5.8.4)</span></li></ol></section><section class="sec"><h2>Habilitação</h2><div class="tw"><table><thead><tr><th>Exigência</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr class="grp"><th colspan="3">Jurídica</th></tr><tr><td>Contrato social em vigor registrado na Junta (11.2.2)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Contrato social (e versão autenticada) na pasta.</td></tr><tr class="grp"><th colspan="3">Fiscal e trabalhista</th></tr><tr><td>Inscrição no CNPJ (11.3.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CNPJ está fora da regra de 60 dias (11.1.2.14). Impressão de 2024: vale reemitir, é rápido.</td></tr><tr><td>Inscrição estadual e/ou municipal (11.3.2)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Documento sem validade impressa vale 60 dias da emissão (11.1.2.14). Prova municipal é de 2023; reemitir CADESP e inscrição municipal.</td></tr><tr><td>Regularidade Fazenda Federal + Seguridade Social (11.3.3/11.3.4)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CND Federal válida até 21/02/2027.</td></tr><tr><td>Regularidade Fazenda Estadual (11.3.3)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CRDA válida até 28/10/2026.</td></tr><tr><td>Regularidade Fazenda Municipal (11.3.3)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">CND Itaquaquecetuba válida até 16/12/2026.</td></tr><tr><td>CRF do FGTS (11.3.4)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Válido na sessão, mas vence em 04/10/2026. Reemitir e deixar pronto para diligência e para a assinatura (20.4).</td></tr><tr><td>CNDT — Justiça do Trabalho (11.3.5.1.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Válida até 22/11/2026.</td></tr><tr class="grp"><th colspan="3">Econômico-financeira</th></tr><tr><td>Certidão negativa de falência do distribuidor da sede (11.4.1)</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Emitida em 13/08/2026. Sem validade impressa, vale 60 dias (11.1.2.14), ou seja, até 12/10/2026. Juntar também a certidão complementar.</td></tr><tr><td>Balanço / índices</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Não exigidos.</td></tr><tr class="grp"><th colspan="3">Técnica</th></tr><tr><td>Qualificação técnica / atestados</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Não será exigida (11.5.1).</td></tr><tr class="grp"><th colspan="3">Outros</th></tr><tr><td>Credenciamento no Portal de Compras Públicas (2.1)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Confirmar login/senha ativos e o representante cadastrado antes de 01/10 às 08:30.</td></tr><tr><td>Sem registro em cadastros de apenados: TCE-SP, TCU, CNJ, CEIS, CNEP (11.1)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Consulta feita pelo pregoeiro. Nenhuma providência da MWT se não houver sanção.</td></tr></tbody></table></div></section><section class="sec"><h2>Exigências técnicas, amostras e laudos</h2><div class="tw"><table><thead><tr><th>Exigência</th><th>Quando</th><th class="c">MWT</th><th>Observação</th></tr></thead><tbody><tr><td>Amostras de todos os modelos ofertados (quantidade e modelos definidos pela Administração)</td><td>do arrematante em 5 dias úteis, na Secretaria de Obras (Rua Belo Horizonte, 7-51)</td><td class="c"><span class="chip chip-warn">Atenção</span></td><td class="note">Custo e frete por conta da licitante. Avaliação: tecido, costura, modelagem, cores e personalização. Reprovar ou não entregar desclassifica.</td></tr><tr><td>Faixas refletivas conforme ABNT NBR 15292/2023 (itens 1, 2, 3, 10, 11, 14, 15 e 18)</td><td>na amostra e na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">O edital não pede laudo, mas a norma é citada. Usar faixa de fornecedor que comprove atender à NBR 15292.</td></tr><tr><td>Dry fit com proteção UV 50+, gola padre com zíper e sublimação (itens 4 e 5)</td><td>na amostra e na entrega</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">O edital não pede laudo UV. Guardar a ficha técnica do tecido com o UV 50+ declarado.</td></tr><tr><td>Etiqueta interna (fabricante, CNPJ, composição, tamanho, lavagem) e embalagem individual em saco plástico</td><td>na entrega</td><td class="c"><span class="chip chip-ok">OK</span></td><td class="note">Exigida em todos os itens de brim, dry fit e calça brim.</td></tr><tr><td>Catálogo, folheto ou dados de marca/modelo/fabricante/procedência</td><td>se o pregoeiro pedir (7.6.1)</td><td class="c"><span class="chip chip-muted">Conferir</span></td><td class="note">Prazo definido na sessão. Ter a descrição técnica de cada item pronta.</td></tr></tbody></table></div></section><div class="two"><section class="sec"><h2>Declarações exigidas <span class="n">7</span></h2><ul class="plain"><li>Enquadramento ME/EPP — art. 3º da LC 123/2006 (campo do sistema, item 3.2.1)</li><li>Cumprimento dos requisitos de habilitação e conformidade da proposta (campo do sistema, item 3.2.4)</li><li>Inexistência de fatos impeditivos à habilitação (campo do sistema, item 3.2.5)</li><li>Não emprega menor (art. 7º, XXXIII, CF) (campo do sistema, item 3.2.6)</li><li>Não foi declarada inidônea (campo do sistema, item 3.2.7)</li><li>Pleno conhecimento e atendimento às exigências de habilitação (campo do sistema, item 2.5)</li><li>Termo de Ciência e de Notificação — TCE-SP (Anexo V, na contratação)</li></ul></section><section class="sec"><h2>Proposta</h2><ul class="plain"><li>No sistema: valor unitário e total por item, marca e descrição detalhada conforme o TR (modelo, garantia/validade, registro quando houver) (5.6)</li><li>Uma única marca por item, sem alternativas, sob pena de desclassificação (5.8.6)</li><li>Proposta inicial sem identificar a licitante (6.2.1)</li><li>E-mail para comunicação (5.7), que será usado também para notificações de sanção (TR 11)</li><li>Validade mínima de 60 dias (5.8.4)</li><li>Proposta final (modelo do Anexo IV, em papel timbrado): em português, sem rasuras, última folha assinada e demais rubricadas (12.1.1)</li><li>Banco, agência e conta para pagamento (12.1.2)</li><li>Valores unitários em algarismos e total em algarismos e por extenso (12.3)</li><li>Marca, modelo, tipo, fabricante e procedência (vinculam a contratada) (12.2.1)</li><li>Prazo de entrega de 30 dias corridos da OF e condição de pagamento conforme o Anexo IV</li><li>Preços com frete, tributos e encargos inclusos até o Almoxarifado de Presidente Epitácio (5.8.1 e 5.8.2)</li></ul></section></div>
+  <p class="foot">Leitura do edital feita pela MWT Uniformes para uso interno. Em caso de dúvida, vale o texto do edital e dos anexos no portal do órgão. Fonte: presidente epitacio 1-10.pdf (Edital PE 075/2026: preâmbulo, itens 2 a 25, Anexos I a V) e presidente epitacio itens.pdf (TR da Secretaria de Obras: itens 1 a 13, especificação técnica, amostras, prazos e pagamento); DOCUMENTOS_MWT.md (situação em 30/09/2026)</p>
+</main>
+</body>
+</html>
