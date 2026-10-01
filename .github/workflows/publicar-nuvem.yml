@@ -1,0 +1,64 @@
+# Publicar nuvem: junta no main as branches claude/... que a rotina "Sistema MWT (nuvem)" envia
+# e, no repositorio da agenda, manda o GitHub Pages republicar o site. Instalado pelo
+# "INSTALAR PUBLICACAO AUTOMATICA.bat" do PC do Thiago. Nao apaga nada do main.
+name: Publicar nuvem
+on:
+  push:
+    branches: ['claude/**']
+  workflow_dispatch:
+  schedule:
+    - cron: '40 10,15,20 * * 1-5'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: publicar-nuvem
+  cancel-in-progress: false
+jobs:
+  juntar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Juntar branches claude/ no main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -u
+          git config user.name "Sistema MWT"
+          git config user.email "licitacoesmwt@users.noreply.github.com"
+          git fetch -q origin '+refs/heads/claude/*:refs/remotes/origin/claude/*' --prune
+          juntadas=""
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/claude/); do
+            br="${ref#origin/}"
+            if [ "$br" = "claude/teste-nuvem" ] || git merge-base --is-ancestor "$ref" HEAD; then
+              git push -q origin --delete "$br" || true
+              continue
+            fi
+            if git merge -q --no-edit -m "Nuvem: junta $br" "$ref"; then
+              juntadas="$juntadas $br"
+            else
+              git merge --abort
+              if git merge -q --no-edit -X theirs -m "Nuvem: junta $br (conflito resolvido pela versao da nuvem)" "$ref"; then
+                juntadas="$juntadas $br"
+                echo "::warning::Conflito em $br resolvido com a versao da nuvem."
+              else
+                git merge --abort || true
+                echo "::error::Nao consegui juntar $br no main. Ficou para revisao."
+              fi
+            fi
+          done
+          if [ -z "$juntadas" ]; then echo "Nada para juntar."; exit 0; fi
+          for t in 1 2 3; do
+            if git push -q origin HEAD:main; then ok=1; break; fi
+            ok=0; sleep 5; git pull -q --no-rebase --no-edit origin main
+          done
+          if [ "$ok" != 1 ]; then echo "::error::Push para main recusado."; exit 1; fi
+          for b in $juntadas; do git push -q origin --delete "$b" || true; done
+          echo "Juntadas:$juntadas"
+          if [ "${REPO#*/}" = "agenda" ]; then
+            gh api -X POST "repos/$REPO/pages/builds" >/dev/null && echo "Site republicado." || echo "::warning::Nao consegui pedir a republicacao do Pages (o push no main normalmente ja republica)."
+          fi
